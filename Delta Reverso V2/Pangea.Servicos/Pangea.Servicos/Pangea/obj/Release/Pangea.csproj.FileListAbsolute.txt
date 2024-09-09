@@ -1,0 +1,6 @@
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Release\Pangea.exe.config
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Release\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Release\Pangea.pdb
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Release\IBM.Data.Informix.dll
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\Release\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\Release\Pangea.pdb

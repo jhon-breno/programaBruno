@@ -1,0 +1,50 @@
+List<String> caseNumberList = new List<String>{{0}};
+List < CNT_Contracting_Status_BO__c > backOfficeList = new List < CNT_Contracting_Status_BO__c > ();
+CNT_Contracting_Status_BO__c backOffice = new CNT_Contracting_Status_BO__c();
+Map<String,Object> resultBackOffice = new Map<String,Object>();
+List<Case> updateListCase = new List<Case>();
+
+List<Case> caso = [SELECT Id, RecordTypeId, RecordType.DeveloperName, CaseNumber, CNT_Contract__c, CNT_Contract__r.CNT_EndDate__c,
+		CNT_Contract__r.StartDate, CNT_Transit_Potencia_Total__c, AssetId, CNT_Quote__c, CNT_Conexion_Transitoria__c, 
+		CNT_Payment_Method__c, CNT_Change_Type__c, PointofDelivery__r.PointofDeliveryNumber__c, CNT_Transit_Date_To__c, 
+		SubCauseBR__c, CNT_ProcessStatus__c, CNT_LastInvoiceOptions__c, PointofDelivery__c, CNT_Documento_Pagamento__c, Status, 
+		CNT_Controller242Success__c, CNT_Transit_Date_From__c, CNT_Tipo_de_Ajuste__c
+		FROM Case
+		WHERE Account.CompanyID__c = '2005' 
+		and Status = 'CNT0002' 
+		and CNT_ProcessStatus__c = 'CNT005'  AND RecordType.DeveloperName = 'CNT_ChangeProduct'
+		and casenumber in :caseNumberList];
+
+
+for (Case item : caso)
+{
+
+System.debug('Processando caso: '+ item.CaseNumber);
+
+CNT_IntegrationHelper.CCC_BR_239 reqCCC239 = CNT_IntegrationDataBR.flow_CCC_Tecnica_BR(item.Id);
+System.debug('JSON reqCCC239: ' + System.JSON.serialize(reqCCC239)); 
+HttpResponse response = CNT_IntegrationHelper.CCC_239_BRSync(reqCCC239, item.Id);
+
+System.debug('response: ' + response);
+
+resultBackOffice = CNT_Utility.resultRequest(response, JSON.serialize(reqCCC239), item, 'Sistema Tecnico');
+
+backOffice = (CNT_Contracting_Status_BO__c) resultBackOffice.get('backoffice');
+
+backOffice.CNT_Technical_Information__c = JSON.serialize(reqCCC239);
+        
+Boolean responseStatus = ((Boolean) resultBackOffice.get('status'));
+				
+if(responseStatus)
+{
+	item.cnt_processStatus__c = '';
+	updateListCase.add(item);
+}
+
+backOfficeList.add(backOffice);
+
+}
+
+
+if(updateListCase.size() > 0){update updateListCase;}
+Insert backOfficeList;

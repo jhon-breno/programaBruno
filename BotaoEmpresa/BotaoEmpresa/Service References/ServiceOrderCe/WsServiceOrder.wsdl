@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="obtainLastOrdersFromClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtainLastOrdersFromClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtainLastOrdersFromClientResult" type="tns:ArrayOfServiceOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfServiceOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ServiceOrder" nillable="true" type="tns:ServiceOrder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServiceOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Step" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceTypeDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Service" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EntryDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinishDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CancelDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CanceledBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CancelReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceObservations" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExecutorObservacions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderMaxTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderVisits" type="tns:ArrayOfOrderVisits" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderVisits">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderVisits" nillable="true" type="tns:OrderVisits" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderVisits">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Step" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contractor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Electrician" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExecutionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExecutionHour" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Response" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PredictedBeginHour" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PredictedEndHour" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationArea" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VisitNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthHeader" type="tns:AuthHeader" />
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="obtainRegularReadingsFromClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtainRegularReadingsFromClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtainRegularReadingsFromClientResult" type="tns:ArrayOfRegularReadingsModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRegularReadingsModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RegularReadingsModel" nillable="true" type="tns:RegularReadingsModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RegularReadingsModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoCp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoCs" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sector" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaLectura" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HoraLectura" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LecturaTerreno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsumoActivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstadoSuministro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClaveLectura" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaLectura2" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rowid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoPs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaLectura3" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="obtainIrregularReadingsFromClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtainIrregularReadingsFromClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtainIrregularReadingsFromClientResult" type="tns:ArrayOfIrregularReadingsModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIrregularReadingsModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IrregularReadingsModel" nillable="true" type="tns:IrregularReadingsModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IrregularReadingsModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoCp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoCs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoPs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sector" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaLectura" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstadoLectura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoraLectura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LecturaTerreno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shunt1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shunt2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shunt3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroMedidor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Consumo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="serviceOrderEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serviceOrderEntry" type="tns:ServiceOrderEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServiceOrderEntry">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ServiceOrderCommon">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BranchOrigin" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AreaOrigin" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="StateDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="StepDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="TimeDefTechnical" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TimeDefTechnicalStep" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="DestinationArea" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DestinationBranch" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegionalDestination" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Observation" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactPhone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RoleEntry" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CorrVisit" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="DateContDefTec" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="RelatedOrderNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReasonEntry" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="OriginalBranch" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ServiceOrderCommon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Step" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EntryDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="serviceOrderEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serviceOrderEntryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateMedidEnteros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="medid" type="tns:Medid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Medid">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Enteros" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeterNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="updateMedidEnterosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateMedidEnterosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getOIsOTsGA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numeroCliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getOIsOTsGAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getOIsOTsGAResult" type="tns:ArrayOfOIOTGA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOIOTGA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OIOTGA" nillable="true" type="tns:OIOTGA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OIOTGA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroOrdem" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UsuarioResp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoOrdem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstadoOrdem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtExecIni" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtDesignacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtDigitacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtAprovacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tecnico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rua" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rota" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AtivEconomica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedidorAtivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedidorReativo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedidorDemanda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstFpAtiva" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstFpReativa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstHpAtiva" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstHpReativa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstDemanda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TecnicoCerj1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TecnicoCerj2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getOIsOTsGB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numeroCliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getOIsOTsGBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getOIsOTsGBResult" type="tns:ArrayOfOIOTGB" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOIOTGB">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OIOTGB" nillable="true" type="tns:OIOTGB" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OIOTGB">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroOrdem" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoOrdem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoOrdemDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sucursal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Situacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtEmissao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtDevolucao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumTDC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Atividade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tarifa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedCadastrado" type="tns:Medidor" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedEncontrado" type="tns:Medidor" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedInstalado" type="tns:Medidor" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtHrExecucaoIni" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtHrExecucaoFim" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ngs" type="tns:ArrayOfNG" />
+          <s:element minOccurs="0" maxOccurs="1" name="Anormalias" type="tns:ArrayOfAnormalia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Medidor">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumMedidor" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumFabrica" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Algarismo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Volts" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amperagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fmm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marca" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Modelo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UltimaLeitura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LetHp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LetReativa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DtUltimaInstal" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NG" nillable="true" type="tns:NG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Ng_cod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ng_desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Resp_ng_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Resp_ng_desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnormalia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Anormalia" nillable="true" type="tns:Anormalia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Anormalia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDetalheRefaturamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numeroCliente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="corrRefacturacion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetalheRefaturamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetalheRefaturamentoResult" type="tns:ArrayOfDetalheRefaturamentoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDetalheRefaturamentoModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DetalheRefaturamentoModel" nillable="true" type="tns:DetalheRefaturamentoModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DetalheRefaturamentoModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Encargo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetHistoricoCorteReliga">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numeroCliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHistoricoCorteReligaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHistoricoCorteReligaResult" type="tns:HistoricoCorteReligaModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HistoricoCorteReligaModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cortes" type="tns:ArrayOfHistoricoCorteModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="Religacoes" type="tns:ArrayOfHistoricoReligacaoModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfHistoricoCorteModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HistoricoCorteModel" nillable="true" type="tns:HistoricoCorteModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HistoricoCorteModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NumReaviso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataReaviso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NroLivro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumOrdem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumTdc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdemServico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataSolicitacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataHora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tramite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IrregInsta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Leitura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Funcionario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Obs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rol" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfHistoricoReligacaoModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HistoricoReligacaoModel" nillable="true" type="tns:HistoricoReligacaoModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HistoricoReligacaoModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NumReaviso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataReaviso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NroLivro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumOrdem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumTdc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdemServico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataSolicitacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataHora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tramite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IrregInsta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Leitura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Funcionario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Obs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rol" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfServiceOrder" nillable="true" type="tns:ArrayOfServiceOrder" />
+      <s:element name="ArrayOfRegularReadingsModel" nillable="true" type="tns:ArrayOfRegularReadingsModel" />
+      <s:element name="ArrayOfIrregularReadingsModel" nillable="true" type="tns:ArrayOfIrregularReadingsModel" />
+      <s:element name="ArrayOfOIOTGA" nillable="true" type="tns:ArrayOfOIOTGA" />
+      <s:element name="ArrayOfOIOTGB" nillable="true" type="tns:ArrayOfOIOTGB" />
+      <s:element name="ArrayOfDetalheRefaturamentoModel" nillable="true" type="tns:ArrayOfDetalheRefaturamentoModel" />
+      <s:element name="HistoricoCorteReligaModel" nillable="true" type="tns:HistoricoCorteReligaModel" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="obtainLastOrdersFromClientSoapIn">
+    <wsdl:part name="parameters" element="tns:obtainLastOrdersFromClient" />
+  </wsdl:message>
+  <wsdl:message name="obtainLastOrdersFromClientSoapOut">
+    <wsdl:part name="parameters" element="tns:obtainLastOrdersFromClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtainLastOrdersFromClientAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientSoapIn">
+    <wsdl:part name="parameters" element="tns:obtainRegularReadingsFromClient" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientSoapOut">
+    <wsdl:part name="parameters" element="tns:obtainRegularReadingsFromClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientSoapIn">
+    <wsdl:part name="parameters" element="tns:obtainIrregularReadingsFromClient" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientSoapOut">
+    <wsdl:part name="parameters" element="tns:obtainIrregularReadingsFromClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="serviceOrderEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:serviceOrderEntry" />
+  </wsdl:message>
+  <wsdl:message name="serviceOrderEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:serviceOrderEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="serviceOrderEntryAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="updateMedidEnterosSoapIn">
+    <wsdl:part name="parameters" element="tns:updateMedidEnteros" />
+  </wsdl:message>
+  <wsdl:message name="updateMedidEnterosSoapOut">
+    <wsdl:part name="parameters" element="tns:updateMedidEnterosResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateMedidEnterosAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGASoapIn">
+    <wsdl:part name="parameters" element="tns:getOIsOTsGA" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGASoapOut">
+    <wsdl:part name="parameters" element="tns:getOIsOTsGAResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGAAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBSoapIn">
+    <wsdl:part name="parameters" element="tns:getOIsOTsGB" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBSoapOut">
+    <wsdl:part name="parameters" element="tns:getOIsOTsGBResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetalheRefaturamento" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetalheRefaturamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHistoricoCorteReliga" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHistoricoCorteReligaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:message name="obtainLastOrdersFromClientHttpGetIn">
+    <wsdl:part name="clientNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obtainLastOrdersFromClientHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfServiceOrder" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientHttpGetIn">
+    <wsdl:part name="clientNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRegularReadingsModel" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientHttpGetIn">
+    <wsdl:part name="clientNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIrregularReadingsModel" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGAHttpGetIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGAHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOIOTGA" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBHttpGetIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOIOTGB" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoHttpGetIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+    <wsdl:part name="corrRefacturacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDetalheRefaturamentoModel" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaHttpGetIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaHttpGetOut">
+    <wsdl:part name="Body" element="tns:HistoricoCorteReligaModel" />
+  </wsdl:message>
+  <wsdl:message name="obtainLastOrdersFromClientHttpPostIn">
+    <wsdl:part name="clientNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obtainLastOrdersFromClientHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfServiceOrder" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientHttpPostIn">
+    <wsdl:part name="clientNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obtainRegularReadingsFromClientHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRegularReadingsModel" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientHttpPostIn">
+    <wsdl:part name="clientNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obtainIrregularReadingsFromClientHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIrregularReadingsModel" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGAHttpPostIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGAHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOIOTGA" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBHttpPostIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getOIsOTsGBHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOIOTGB" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoHttpPostIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+    <wsdl:part name="corrRefacturacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDetalheRefaturamentoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDetalheRefaturamentoModel" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaHttpPostIn">
+    <wsdl:part name="numeroCliente" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricoCorteReligaHttpPostOut">
+    <wsdl:part name="Body" element="tns:HistoricoCorteReligaModel" />
+  </wsdl:message>
+  <wsdl:portType name="WsServiceOrderSoap">
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <wsdl:input message="tns:obtainLastOrdersFromClientSoapIn" />
+      <wsdl:output message="tns:obtainLastOrdersFromClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <wsdl:input message="tns:obtainRegularReadingsFromClientSoapIn" />
+      <wsdl:output message="tns:obtainRegularReadingsFromClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <wsdl:input message="tns:obtainIrregularReadingsFromClientSoapIn" />
+      <wsdl:output message="tns:obtainIrregularReadingsFromClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="serviceOrderEntry">
+      <wsdl:input message="tns:serviceOrderEntrySoapIn" />
+      <wsdl:output message="tns:serviceOrderEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMedidEnteros">
+      <wsdl:input message="tns:updateMedidEnterosSoapIn" />
+      <wsdl:output message="tns:updateMedidEnterosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <wsdl:input message="tns:getOIsOTsGASoapIn" />
+      <wsdl:output message="tns:getOIsOTsGASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <wsdl:input message="tns:getOIsOTsGBSoapIn" />
+      <wsdl:output message="tns:getOIsOTsGBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <wsdl:input message="tns:GetDetalheRefaturamentoSoapIn" />
+      <wsdl:output message="tns:GetDetalheRefaturamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <wsdl:input message="tns:GetHistoricoCorteReligaSoapIn" />
+      <wsdl:output message="tns:GetHistoricoCorteReligaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WsServiceOrderHttpGet">
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <wsdl:input message="tns:obtainLastOrdersFromClientHttpGetIn" />
+      <wsdl:output message="tns:obtainLastOrdersFromClientHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <wsdl:input message="tns:obtainRegularReadingsFromClientHttpGetIn" />
+      <wsdl:output message="tns:obtainRegularReadingsFromClientHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <wsdl:input message="tns:obtainIrregularReadingsFromClientHttpGetIn" />
+      <wsdl:output message="tns:obtainIrregularReadingsFromClientHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <wsdl:input message="tns:getOIsOTsGAHttpGetIn" />
+      <wsdl:output message="tns:getOIsOTsGAHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <wsdl:input message="tns:getOIsOTsGBHttpGetIn" />
+      <wsdl:output message="tns:getOIsOTsGBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <wsdl:input message="tns:GetDetalheRefaturamentoHttpGetIn" />
+      <wsdl:output message="tns:GetDetalheRefaturamentoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <wsdl:input message="tns:GetHistoricoCorteReligaHttpGetIn" />
+      <wsdl:output message="tns:GetHistoricoCorteReligaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WsServiceOrderHttpPost">
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <wsdl:input message="tns:obtainLastOrdersFromClientHttpPostIn" />
+      <wsdl:output message="tns:obtainLastOrdersFromClientHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <wsdl:input message="tns:obtainRegularReadingsFromClientHttpPostIn" />
+      <wsdl:output message="tns:obtainRegularReadingsFromClientHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <wsdl:input message="tns:obtainIrregularReadingsFromClientHttpPostIn" />
+      <wsdl:output message="tns:obtainIrregularReadingsFromClientHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <wsdl:input message="tns:getOIsOTsGAHttpPostIn" />
+      <wsdl:output message="tns:getOIsOTsGAHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <wsdl:input message="tns:getOIsOTsGBHttpPostIn" />
+      <wsdl:output message="tns:getOIsOTsGBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <wsdl:input message="tns:GetDetalheRefaturamentoHttpPostIn" />
+      <wsdl:output message="tns:GetDetalheRefaturamentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <wsdl:input message="tns:GetHistoricoCorteReligaHttpPostIn" />
+      <wsdl:output message="tns:GetHistoricoCorteReligaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsServiceOrderSoap" type="tns:WsServiceOrderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <soap:operation soapAction="http://tempuri.org/obtainLastOrdersFromClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:obtainLastOrdersFromClientAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <soap:operation soapAction="http://tempuri.org/obtainRegularReadingsFromClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:obtainRegularReadingsFromClientAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <soap:operation soapAction="http://tempuri.org/obtainIrregularReadingsFromClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:obtainIrregularReadingsFromClientAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serviceOrderEntry">
+      <soap:operation soapAction="http://tempuri.org/serviceOrderEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:serviceOrderEntryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMedidEnteros">
+      <soap:operation soapAction="http://tempuri.org/updateMedidEnteros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateMedidEnterosAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <soap:operation soapAction="http://tempuri.org/getOIsOTsGA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getOIsOTsGAAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <soap:operation soapAction="http://tempuri.org/getOIsOTsGB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getOIsOTsGBAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <soap:operation soapAction="http://tempuri.org/GetDetalheRefaturamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDetalheRefaturamentoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <soap:operation soapAction="http://tempuri.org/GetHistoricoCorteReliga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetHistoricoCorteReligaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsServiceOrderSoap12" type="tns:WsServiceOrderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <soap12:operation soapAction="http://tempuri.org/obtainLastOrdersFromClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:obtainLastOrdersFromClientAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <soap12:operation soapAction="http://tempuri.org/obtainRegularReadingsFromClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:obtainRegularReadingsFromClientAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <soap12:operation soapAction="http://tempuri.org/obtainIrregularReadingsFromClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:obtainIrregularReadingsFromClientAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="serviceOrderEntry">
+      <soap12:operation soapAction="http://tempuri.org/serviceOrderEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:serviceOrderEntryAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMedidEnteros">
+      <soap12:operation soapAction="http://tempuri.org/updateMedidEnteros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateMedidEnterosAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <soap12:operation soapAction="http://tempuri.org/getOIsOTsGA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getOIsOTsGAAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <soap12:operation soapAction="http://tempuri.org/getOIsOTsGB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getOIsOTsGBAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <soap12:operation soapAction="http://tempuri.org/GetDetalheRefaturamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDetalheRefaturamentoAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <soap12:operation soapAction="http://tempuri.org/GetHistoricoCorteReliga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetHistoricoCorteReligaAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsServiceOrderHttpGet" type="tns:WsServiceOrderHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <http:operation location="/obtainLastOrdersFromClient" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <http:operation location="/obtainRegularReadingsFromClient" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <http:operation location="/obtainIrregularReadingsFromClient" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <http:operation location="/getOIsOTsGA" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <http:operation location="/getOIsOTsGB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <http:operation location="/GetDetalheRefaturamento" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <http:operation location="/GetHistoricoCorteReliga" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsServiceOrderHttpPost" type="tns:WsServiceOrderHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="obtainLastOrdersFromClient">
+      <http:operation location="/obtainLastOrdersFromClient" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainRegularReadingsFromClient">
+      <http:operation location="/obtainRegularReadingsFromClient" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtainIrregularReadingsFromClient">
+      <http:operation location="/obtainIrregularReadingsFromClient" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGA">
+      <http:operation location="/getOIsOTsGA" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOIsOTsGB">
+      <http:operation location="/getOIsOTsGB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetalheRefaturamento">
+      <http:operation location="/GetDetalheRefaturamento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricoCorteReliga">
+      <http:operation location="/GetHistoricoCorteReliga" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsServiceOrder">
+    <wsdl:port name="WsServiceOrderSoap" binding="tns:WsServiceOrderSoap">
+      <soap:address location="http://10.152.153.66:9005/WsServiceOrder.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsServiceOrderSoap12" binding="tns:WsServiceOrderSoap12">
+      <soap12:address location="http://10.152.153.66:9005/WsServiceOrder.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsServiceOrderHttpGet" binding="tns:WsServiceOrderHttpGet">
+      <http:address location="http://10.152.153.66:9005/WsServiceOrder.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsServiceOrderHttpPost" binding="tns:WsServiceOrderHttpPost">
+      <http:address location="http://10.152.153.66:9005/WsServiceOrder.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

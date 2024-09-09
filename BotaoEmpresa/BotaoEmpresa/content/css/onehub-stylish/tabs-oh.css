@@ -1,0 +1,71 @@
+﻿.tab{
+    margin-top: 30px;
+}
+.tab .nav-tabs{
+    border:none;
+    border-bottom: 1px solid #e4e4e4;
+}
+.nav-tabs li a {
+    font-family: "Enel Roobert Bold";
+    font-size: 16px;
+    padding: 15px 15px;
+    border: 1px solid #fff;
+    border-top: 2px solid #fff;
+    border-right: 0px none;
+    background: #ededed;
+    color: #000;
+    border-radius: 0;
+    margin-right: 0px;
+    transition: all 0.3s ease-in 0s;
+    border-bottom: 1px solid #ddd;
+}
+.nav-tabs li a:hover{
+    border-bottom-color: #ededed;
+    border-right: 0px none;
+    background: rgb(255, 15, 100);
+    color: #fff;
+}
+.nav-tabs li a i{
+    display: inline-block;
+    text-align: center;
+    margin-right:10px;
+}
+.nav-tabs li:last-child{
+    border-right:1px solid #ededed;
+}
+.nav-tabs li.active a,
+.nav-tabs li.active a:focus,
+.nav-tabs li.active a:hover{
+    border-top: 3px solid rgb(255, 15, 100);
+    border-right: 1px solid #d3d3d3;
+    margin-top: -15px;
+    color: #444;
+    padding: 22px 26px;
+}
+.tab .tab-content{
+    padding: 20px;
+    line-height: 22px;
+    box-shadow:0px 1px 0px #808080;
+}
+.tab .tab-content h3{
+    margin-top: 0;
+}
+@media only screen and (max-width: 767px){
+    .nav-tabs li{
+        width:100%;
+        margin-bottom: 10px;
+    }
+    .nav-tabs li a{
+        padding: 15px;
+    }
+    .nav-tabs li.active a,
+    .nav-tabs li.active a:focus,
+    .nav-tabs li.active a:hover{
+        padding: 15px;
+        margin-top: 0;
+    }
+}
+
+.nav-tabs {
+    border-bottom: 0;
+}

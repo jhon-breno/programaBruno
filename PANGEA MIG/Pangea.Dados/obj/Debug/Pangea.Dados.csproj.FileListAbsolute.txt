@@ -1,0 +1,15 @@
+C:\Projetos\Pangea.Swat\bin\Debug\Pangea.Dados.dll
+C:\Projetos\Pangea.Swat\bin\Debug\Pangea.Dados.pdb
+C:\Projetos\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.csprojResolveAssemblyReference.cache
+C:\Projetos\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.dll
+C:\Projetos\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.pdb
+C:\Projetos\Salesforce\Pangea.Swat\bin\Debug\Pangea.Dados.dll
+C:\Projetos\Salesforce\Pangea.Swat\bin\Debug\Pangea.Dados.pdb
+C:\Projetos\Salesforce\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.csprojResolveAssemblyReference.cache
+C:\Projetos\Salesforce\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.dll
+C:\Projetos\Salesforce\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.pdb
+D:\Projetos\Salesforce\Pangea.Swat\bin\Debug\Pangea.Dados.dll
+D:\Projetos\Salesforce\Pangea.Swat\bin\Debug\Pangea.Dados.pdb
+D:\Projetos\Salesforce\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.csprojResolveAssemblyReference.cache
+D:\Projetos\Salesforce\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.dll
+D:\Projetos\Salesforce\Pangea.Swat\Pangea.Dados\obj\Debug\Pangea.Dados.pdb

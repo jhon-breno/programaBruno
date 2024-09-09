@@ -1,0 +1,28 @@
+public List<Id> lstCaseCompleteOrder = new List<Id>();
+
+
+
+List<Case> caseCompleteOrder = [SELECT id, (SELECT Case__c FROM Contracting_Status_BackOffices__r where Status__c in ('Envio Facturador: OK >> Resultado:"Serviço executado corretamente."; SubCause:ACCOUNT','Envio Facturador : OK >> Resultado:"Serviço executado corretamente."; SubCause:ACCOUNT')), (select CNT_Case__c from configurations__r where NE__OrderStatus__c in('Pending','Sent') and RecordTypeAUX__c = 'Order')
+FROM Case WHERE (RecordType.DeveloperName = 'CNT_OwnershipChange' )
+and Status = 'CNT0008'
+and Type not in ('TIP004')
+and ClosedDate >= LAST_N_DAYS:2
+and PointofDelivery__r.CompanyID__c in ('2005','2003')];
+
+
+
+for(Case c : caseCompleteOrder)
+{
+	List<CNT_Contracting_Status_BO__c> boList = c.Contracting_Status_BackOffices__r;
+	List<NE__Order__c > orderList = c.configurations__r;
+	
+	if(boList.size() > 0 && orderList.size() > 0)
+    		lstCaseCompleteOrder.add(c.id);    
+}
+
+System.debug('Registros no Batch ' + lstCaseCompleteOrder.size());
+
+System.debug('###BATCH COMPLETE ORDER###');
+CNT_CompleteOrderBatch sch = new CNT_CompleteOrderBatch(lstCaseCompleteOrder);
+ID prioridade = Database.executebatch(sch, 4);
+FlexQueue.moveJobToFront(prioridade);

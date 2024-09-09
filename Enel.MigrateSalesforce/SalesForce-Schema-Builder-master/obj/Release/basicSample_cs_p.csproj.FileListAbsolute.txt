@@ -1,0 +1,6 @@
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Release\basicSample_cs_p.csproj.AssemblyReference.cache
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Release\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Release\AtualizaFaturaSalesForce.exe
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Release\basicSample_cs_p.csproj.AssemblyReference.cache
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Release\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Release\AtualizaFaturaSalesForce.exe

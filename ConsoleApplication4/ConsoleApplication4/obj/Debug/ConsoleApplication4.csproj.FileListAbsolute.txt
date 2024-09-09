@@ -1,0 +1,27 @@
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+C:\Users\br0118831537\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+C:\Users\br0118831537\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+C:\Users\br0118831537\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+C:\Users\br0118831537\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+C:\Users\br0118831537\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+C:\Users\br0118831537\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.AssemblyReference.cache
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+C:\Users\blawe\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.AssemblyReference.cache
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.SuggestedBindingRedirects.cache
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csproj.CoreCompileInputs.cache
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+C:\Users\HomeWork\Desktop\Programas\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb

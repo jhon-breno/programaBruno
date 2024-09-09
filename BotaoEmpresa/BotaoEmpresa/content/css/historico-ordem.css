@@ -1,0 +1,88 @@
+﻿.field-set {
+    padding: 1.35em 1.625em 1.35em;
+    margin: 0 2px;
+    border: 1.5px solid #cecece;
+    margin-bottom: 30px;
+}
+
+    .field-set legend {
+        border-bottom: 0;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.table > tbody > tr > th {
+    font-size: 16px;
+    text-align: left;
+    border-right: 2px solid #555;
+}
+
+.table > tbody > tr > td {
+    font-size: 14px;
+    color: #000;
+}
+
+.table > tbody > tr > th:last-child {
+    border-right: none;
+}
+
+.table > thead > tr > th {
+    border: 0;
+    font-size: 16px;
+    text-align: left;
+    border-right: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+}
+
+.table > thead > tr > td {
+    font-size: 14px;
+    color: #000;
+}
+
+.table > thead > tr > th:last-child {
+    border-right: none;
+}
+
+.text-field {
+    height: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+
+thead {
+    color: #fff;
+    background-color: #41b9e6;
+}
+
+.btn-send {
+    letter-spacing: 0.6px;
+    text-decoration: none solid rgb(255, 255, 255);
+    background-color: rgb(65, 185, 230);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(65, 185, 230);
+    border-top: 2px solid rgb(65, 185, 230);
+    border-right: 2px solid rgb(65, 185, 230);
+    border-bottom: 2px solid rgb(65, 185, 230);
+    border-left: 2px solid rgb(65, 185, 230);
+}
+
+    .btn-send:hover {
+        border: 2px solid rgb(65, 185, 230);
+        background-color: #fff;
+        color: rgb(65, 185, 230);
+    }
+
+.table-responsive {
+    overflow: overlay;
+}
+.table {
+    width: 100%;
+}

@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pangea.Entidades.DTO
+{
+    [Serializable]
+    public class ActualizacionAgendaDTO
+    {
+        public int codigo_empresa { get; set; }
+        public string unidade_leitura { get; set; }
+        public string data_leitura_prevista { get; set; }
+        public string data_leitura_atual { get; set; }
+        public string sucursal { get; set; }
+
+       // public int referencia { get; set; }
+    }
+}

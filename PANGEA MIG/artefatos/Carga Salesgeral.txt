@@ -1,0 +1,45 @@
+set pdqpriority  80;
+set isolation to dirty read;
+unload to /synergia/archivos/clientesTodos.txt
+
+select   round(to_number(replace(replace(numero_cliente, chr(13), ''), chr(10), '')),0)
+	, trim(replace(replace(cliente_anterior, chr(13), ''), chr(10), ''))
+	, trim(replace(replace(documento_cliente, chr(13), ''), chr(10), ''))
+	, trim(replace(replace(tipo_identidade, chr(13), ''), chr(10), ''))
+	, trim(replace(replace(nombre, chr(13), ''), chr(10), ''))
+	, trim(replace(replace(apelido, chr(13), ''), chr(10), ''))
+from (
+select c.numero_cliente, c.cliente_anterior,
+        case    when nvl(d.tipo_documento,'') = '' THEN nvl(trim(c.rut),'') || nvl(trim(c.dv_rut),'')
+                else nvl(trim(d.numero_doc),'') || nvl(trim(d.dv_documento),'')
+        end documento_cliente,
+        case    when nvl(d.tipo_documento,'') = '' then trim(c.tipo_ident)
+                else trim(d.tipo_documento)
+        end tipo_identidade 
+        , c.nombre
+	, nvl(trim(sg.apelido), c.nombre) apelido
+from cliente c
+	, outer sales_geral sg
+	, outer documento_cliente d
+where c.numero_cliente = d.numero_cliente
+	and d.tipo_documento in ('002','005')
+	and c.Estado_cliente <> 8
+	and c.numero_cliente = sg.numero_cliente
+UNION
+select c.numero_cliente, c.cliente_anterior,
+        nvl(trim(c.rut),'') || nvl(trim(c.dv_rut),'') documento_cliente,
+        trim(c.tipo_ident) tipo_identidade 
+        , c.nombre
+	, nvl(trim(sg.apelido), c.nombre) apelido
+from grandes:cliente c
+	, clientes:cliente c2
+	, outer sales_geral sg
+where c1.numero_cliente = c.numero_cliente
+	and c.tipo_ident in ('002','003','004')
+	and c2.Estado_cliente = 8
+	and c.numero_cliente = sg.numero_cliente
+)
+order by 1 desc
+
+
+

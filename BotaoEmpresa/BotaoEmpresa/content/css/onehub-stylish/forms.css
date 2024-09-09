@@ -1,0 +1,606 @@
+﻿.text-field {
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    
+    letter-spacing: normal;
+    line-height: 22px;
+    text-decoration: none solid rgb(0, 0, 0);
+    text-align: start;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: baseline;
+    white-space: normal;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(0, 0, 0);
+    /* Box */
+    height: 50px;
+    height: 59px;
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    margin: 0px;
+    padding: 12px 15px;
+    max-height: none;
+    min-height: 50px;
+    max-width: none;
+    font-family: "Enel Roobert Light",Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+    .text-field:focus {
+        border: 2px solid #000;
+    }
+
+.text-area {
+    height: 150px;
+}
+
+.grupo-field {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+}
+
+.text-error-field {
+    font-size: 15px;
+    color: #ff0f64;
+}
+
+.btn-base {
+    font-family: "Enel Roobert Bold";
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    
+    line-height: 16px;
+    text-align: center;
+    text-indent: 0px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    word-spacing: 0px;
+    /* Color & Background */
+    background-attachment: scroll;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    /* Box */
+    height: 50px;
+    width: 100%;
+    max-height: none;
+    min-height: 0px;
+    max-width: none;
+    min-width: 23%;
+    margin: 15px 0px 0px 0px;
+    padding: 15px 0px;
+}
+
+.btn-send {
+    letter-spacing: 0.6px;
+    text-decoration: none solid rgb(255, 255, 255);
+    background-color: rgb(255, 15, 100);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 15, 100);
+    border-top: 2px solid rgb(255, 15, 100);
+    border-right: 2px solid rgb(255, 15, 100);
+    border-bottom: 2px solid rgb(255, 15, 100);
+    border-left: 2px solid rgb(255, 15, 100);
+}
+
+    .btn-send:hover {
+        border: 2px solid rgb(255, 15, 100);
+        background-color: #fff;
+        color: rgb(255, 15, 100);
+    }
+
+.btn-cancel {
+    letter-spacing: normal;
+    text-decoration: none solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-top: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-left: 2px solid rgb(0, 0, 0);
+}
+
+    .btn-cancel:hover {
+        border: 2px solid #000;
+        background-color: #000;
+        color: #fff;
+    }
+
+.form-group span {
+    line-height: 30px;
+    font-size: 15px;
+    
+    font-family: "Enel Roobert Regular";
+}
+
+.row-btn {
+    margin-top: 20px;
+}
+
+.content-pading {
+    padding-bottom: 50px;
+    min-height: 669px;
+}
+
+.text-avisos {
+    font-size: 14px;
+    color: gray;
+    line-height: 0;
+}
+
+.alert {
+    margin-top: 50px;
+}
+
+.alert-oh {
+    color: #000;
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+    border-radius: 0;
+    padding: 15px 20px;
+}
+
+.fa {
+    font-size: 20px;
+    padding: 5px 0px 15px 0px;
+}
+
+.fa-check-circle {
+    color: #55be5a;
+}
+
+.fa-info {
+    color: #000;
+}
+
+.fa-times {
+    color: #ff0c00;
+}
+
+#pnaviso {
+    margin: 0 30px 0 30px;
+    line-height: 24px;
+    text-align: left;
+    font-size: 15px;
+    
+    font-family: "Enel Roobert Light",Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.big-icon {
+    font-size: 10em;
+}
+
+input[readonly] {
+    cursor: not-allowed;
+    background-color: #d9d9d9;
+}
+
+/* The container */
+.container-rd {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default radio button */
+    .container-rd input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .container-rd label {
+        margin-left: 20px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #d9d9d9;
+    border: 2px solid #b9b9b9;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.container-rd:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-rd input:checked ~ .checkmark {
+    background-color: #ff0f64;
+    border: 2px solid #ff0f64;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-rd input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-rd .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+/*CHECKBOX STYLE*/
+/* Customize the label (the container) */
+.container-cb {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 50%;
+}
+
+    /* Hide the browser's default checkbox */
+    .container-cb input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .container-cb label {
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .container-cb a {
+        font-style: italic;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+/* Create a custom checkbox */
+.checkmark-cb {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-cb:hover input ~ .checkmark-cb {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-cb input:checked ~ .checkmark-cb {
+    background-color: #ff0f64;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-cb:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-cb input:checked ~ .checkmark-cb:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-cb .checkmark-cb:after {
+    left: 10px;
+    top: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*CHECKBOX STYLE FIM*/
+
+.padding-top-banner {
+    padding-top: 25px;
+    min-height: 669px;
+    padding-bottom: 25px;
+}
+
+.input-group-addon {
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    border-right: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+    border-left: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+    .input-group-addon i {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        color: rgb(255, 15, 100);
+        cursor: pointer;
+    }
+
+.input-group .text-field {
+    border-right: 0;
+}
+
+.dialog-fix-size-button {
+    width: 20%;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+.dialog-vertical-center .modal-dialog {
+    margin-top: 20%;
+}
+
+.bootstrap-dialog-header .bootstrap-dialog-title {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.bootstrap-dialog .bootstrap-dialog-message {
+    font-size: 16px;
+}
+
+.modal-content {
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+.bootstrap-dialog .modal-header {
+    -ms-border-radius: 0;
+    border-radius: 0;
+    left: 0;
+}
+
+.modal-content {
+    border: none;
+}
+
+.dialog-margin-right-button {
+    margin-right: 25px;
+}
+
+.lancez-list ol {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+    .lancez-list ol ol {
+        margin: 0 0 0 2em; /* Add some left margin for inner lists */
+    }
+
+.lancez-list .rectangle-list span {
+    font-family: "Enel Roobert Light";
+    font-size: 16px;
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    text-decoration: none;
+}
+
+    .lancez-list .rectangle-list span:after {
+        position: absolute;
+        content: '';
+        border: .5em solid transparent;
+        left: -1em;
+        top: 50%;
+        margin-top: -.5em;
+        left: -.5em;
+        border-left-color: #ddd;
+    }
+
+.text-indent {
+    text-indent: 50px;
+}
+
+.text-destacado {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.label-importante {
+    color: rgb(255, 15, 100);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .custom-offset-login {
+        margin-left: 29.16666666666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-offset-login {
+        margin-left: 29.16666666666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-offset-login {
+        margin-left: 29.16666666666667%;
+    }
+}
+
+.dropdown-box select {
+    color: #ccc;
+}
+
+.dropdown-box option {
+    color: #000;
+    
+    font-family: "Enel Roobert Regular",Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+    .dropdown-box option:first-child {
+        color: #ccc;
+    }
+
+.pink {
+    color: rgb(255, 15, 100);
+}
+
+.pink-bg {
+    background: rgb(255, 15, 100);
+}
+
+.orange-bg {
+    background: #ff5a0f;
+}
+
+.orange {
+    color: #ff5a0f;
+}
+
+.green {
+    color: #55be5a;
+}
+
+.green-bg {
+    background: #55be5a;
+}
+
+.font-size-15 {
+    font-size: 15px;
+}
+
+input[readonly].readonly-white {
+    cursor: not-allowed;
+    background-color: #fff;
+}
+
+.container-cb-auto {
+    width: 100%;
+}
+
+.row label {
+    line-height: 30px;
+    font-size: 15px;
+    
+    font-family: "Enel Roobert Regular";
+}
+
+footer .socials .social-icons .social-icon {
+    line-height: 1 !important;
+}
+
+input {
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.reset-margin-bottom {
+    margin-bottom: 0;
+}
+
+
+@media (min-width: 992px) {
+    .col-md-8-captcha-fix {
+        width: 61.666667%;
+        margin-left: 5%;
+    }
+}
+
+.link-login {
+    font-family: 'Enel Roobert Bold';
+    font-size: 15px;
+    color: #000;
+}
+
+    .link-login:hover {
+        font-family: 'Enel Roobert Bold';
+        text-decoration: underline;
+        color: #000;
+    }
+
+.negrito {
+    font-weight: bold;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.btn-base[disabled] {
+    cursor: not-allowed;
+    background-color: #d9d9d9;
+}
+
+.btn-base:hover[disabled] {
+    color: #000;
+}
+
+.big-size-rb {
+    zoom: 1.4;
+}
+
+    .big-size-rb label {
+        font-size: 12px;
+    }
+

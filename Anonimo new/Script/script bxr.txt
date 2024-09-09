@@ -1,0 +1,34 @@
+List<Case> casesMapCnt = new List<Case>();
+
+casesMapCnt = new List<Case>([SELECT id,
+PointofDeliveryNumber__c,
+Distribuidora__c,
+(SELECT Status__c, CreatedDate FROM Contracting_Status_BackOffices__r),
+tolabel(status)
+FROM Case
+WHERE CNT_Tipo_de_Ajuste__c = 'Adesão/Exclusão Baixa Renda'
+AND CreatedDate >= 2022-05-12T00:00:00.000-00:00
+AND CNT_Cliente_Baixa_Renda__c = True
+AND CreatedBy.Name IN ('Leonardo Araujo dos Anjos Silva')
+AND Distribuidora__C = 'ENEL Distribuição CE' and status='CNT0002']);
+
+List<String> idList = new List<String>();
+
+
+for (Case item : casesMapCnt)
+{
+	//System.debug('Número do caso ' + item.Contracting_Status_BackOffices__r);
+	
+	if (item.Contracting_Status_BackOffices__r.size() == 0)
+	{
+		idList.add(item.id);
+		System.debug('Número do caso ' + item.id);
+		//break;
+	}
+}
+
+BaixaRendaMassivoInteg qb = new BaixaRendaMassivoInteg(idList);
+
+ID jobId = Database.executeBatch(qb,1);
+
+FlexQueue.moveJobToFront(jobId);

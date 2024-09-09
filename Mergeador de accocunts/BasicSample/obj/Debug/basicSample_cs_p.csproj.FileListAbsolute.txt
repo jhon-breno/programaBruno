@@ -1,0 +1,32 @@
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\basicSample_cs_p.csprojAssemblyReference.cache
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\SalesforceExtractor.Properties.Resources.resources
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\basicSample_cs_p.csproj.GenerateResource.cache
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\NLog.config
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\SalesforceExtractor.exe.config
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\SalesforceExtractor.exe
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\SalesforceExtractor.pdb
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\IBM.Data.Informix.dll
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\NLog.dll
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\BrunoLisa\Desktop\BasicSample\bin\Debug\NLog.xml
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\basicSample_cs_p.csproj.CopyComplete
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\SalesforceExtractor.exe
+C:\Users\BrunoLisa\Desktop\BasicSample\obj\Debug\SalesforceExtractor.pdb
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\NLog.config
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\SalesforceExtractor.exe.config
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\SalesforceExtractor.exe
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\SalesforceExtractor.pdb
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\IBM.Data.Informix.dll
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\NLog.dll
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\bin\Debug\NLog.xml
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\basicSample_cs_p.csprojAssemblyReference.cache
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\SalesforceExtractor.Properties.Resources.resources
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\basicSample_cs_p.csproj.GenerateResource.cache
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\basicSample_cs_p.csproj.CopyComplete
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\SalesforceExtractor.exe
+C:\Users\br0118831537\Desktop\Programas\Mergeador de accocunts\BasicSample\obj\Debug\SalesforceExtractor.pdb

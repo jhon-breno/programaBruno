@@ -1,0 +1,32 @@
+c:\users\bruno werneck\documents\visual studio 2012\Projects\SalesGeralAcerto\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe.config
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto2\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe.config
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto2\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto2\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto2\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto2\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto2\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto3\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe.config
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto3\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto3\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.pdb
+C:\Users\Bruno Werneck\Documents\Visual Studio 2012\Projects\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csprojResolveAssemblyReference.cache
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe.config
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.exe
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.pdb
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.pdb
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csprojAssemblyReference.cache
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto3\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csproj.CoreCompileInputs.cache
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe.config
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.exe
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\bin\Debug\SalesGeralAcerto.pdb
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csproj.CoreCompileInputs.cache
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.exe
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.pdb
+C:\Users\br0118831537\Desktop\Programas\SalesGeralAcerto4\SalesGeralAcerto\obj\Debug\SalesGeralAcerto.csproj.AssemblyReference.cache

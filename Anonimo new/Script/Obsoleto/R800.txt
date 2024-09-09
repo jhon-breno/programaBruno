@@ -1,0 +1,103 @@
+Date actualDate = Date.today();
+
+List<CNT_Contracting_Status_BO__c> listBackOffice = new List<CNT_Contracting_Status_BO__c>();
+CNT_Contracting_Status_BO__c backOffice = new CNT_Contracting_Status_BO__c();	
+Map<String, CNT_Rate_Effective__c> effectiveRateTable = CNT_Utility.getEffectiveRateMap();
+Set<String> contractIds = new Set<String>();
+       
+for(Contract myContract : [SELECT Id, Name, CNT_EffectiveDateRateBR__c FROM Contract WHERE CNT_ExternalContract_ID_2__c IN ({0}) AND  CNT_Quote__c != null AND Status = 'Activated' AND Account.Country__c = 'BRASIL']){
+	contractIds.add(myContract.Id);
+}
+
+// Select the active assets related with contracts
+Map<String, Asset> assetMap = new Map<String, Asset>();
+for (Asset myAsset : [SELECT Id, Country__c, AccountId, ContactId, PointofDelivery__c, NE__Order_Config__c, NE__ProdId__c, NE__ProdId__r.Name, NE__CATALOG__C, NE__STATUS__C, CNT_Case__c, CNT_Case__r.Address__c, Contract__c, Contract__r.CNT_Quote__c FROM Asset WHERE NE__Status__c = 'Active' AND Country__c = 'BRASIL' AND Contract__c IN: (contractIds) ] ){
+	assetMap.put(myAsset.Id, myAsset);
+}
+		
+		
+try{	
+	Set<String> casesId = new Set<String>();
+	Set<String> accountIds = new Set<String>(); 
+	for (Asset asset : assetMap.values() ){
+		if(String.isNotBlank(asset.AccountId)){
+			accountIds.add(asset.AccountId);
+		}
+		if(String.isNotBlank(asset.CNT_Case__c)){
+			casesId.add(asset.CNT_Case__c);
+		}
+	}
+
+	// Get cases related with asset
+	Map<Id, Case> mapCases = new Map<Id, Case>([SELECT Id, PointofDelivery__c, AccountId, Address__c, AssetId, CNT_Contract__c, CNT_Potencia__c, Company__c, Country__c, Status, SubCauseBR__c, Reason, SubCause__c, RecordTypeId,  CNT_Change_Type__c, CNT_Tipo_de_Ajuste__c FROM Case WHERE Id IN: ( casesId )]);
+		
+	// Get all contact related with accounts
+	Map<Id, String> accountContactIdMap = new Map<Id, String>();
+	for (Contact myContact : [SELECT Id, Name, Email, AccountId FROM Contact WHERE AccountId IN: (accountIds)] ){
+		if(!accountContactIdMap.containsKey(myContact.AccountId)){
+			accountContactIdMap.put(myContact.AccountId, myContact.Id);
+		}
+	}
+		
+	List<Case> newCaseList = new List<Case>();
+	Map<Id, Case> assetCaseMap = new Map<Id, Case>(); 
+	for (Asset asset : assetMap.values() ){
+
+		Case myCase = new Case();
+		if(mapCases.get(asset.CNT_Case__c) != null){
+			System.debug(':: Clone Case ');
+			myCase = mapCases.get(asset.CNT_Case__c).clone(false, true, false, false);
+		}
+		myCase.CNT_ByPass__c = true; 
+		myCase.AccountId = asset.AccountId; 
+		myCase.ContactId = (asset.ContactId != null)? asset.ContactId : accountContactIdMap.get(asset.AccountId); 
+		myCase.Address__c = asset.CNT_Case__r.Address__c; 
+		myCase.CNT_Contract__c = asset.Contract__c;
+		myCase.PointofDelivery__c = asset.PointofDelivery__c ;
+		myCase.AssetId = asset.Id;
+		myCase.Country__c = 'BRASIL';
+		myCase.Status = 'CNT0002';
+		myCase.CNT_ProcessStatus__c = 'CNT006';// Enviar Synergia
+		myCase.Reason = 'MOT017';
+		myCase.SubCauseBR__c = '56';// SOL TROCA TARIFA EXPIRADA
+		myCase.Subject = 'SOL TROCA TARIFA EXPIRADA';
+		myCase.RecordTypeId = CNT_Record_Types__c.getInstance('ANY_case_ProductChange').ID__c;
+		myCase.CNT_Change_Type__c = '1-Alteração de Tarifa';
+		myCase.CNT_Tipo_de_Ajuste__c = null;
+		myCase.Description = 'Tarifa atualizada de acordo resoluçao 800.';
+
+		newCaseList.add(myCase);// global declaretion
+		assetCaseMap.put(asset.NE__Order_Config__c, myCase);
+	}
+
+	if(newCaseList.size() > 0 ) { insert newCaseList; }
+	else { return; }
+			
+	Map<Id, Case> orderCaseMap = CNT_Utility.cloneOrder(assetCaseMap);
+	List<Contract> updateContracts = new List<Contract>();
+	Set<Id> caseIds = new Set<Id>(); 
+	
+
+	for (Case myCase : orderCaseMap.values() ){
+		updateContracts.add( new Contract(Id=myCase.CNT_Contract__c, CNT_Case__c=myCase.Id));
+		caseIds.add(myCase.Id);
+	}
+
+	// Updateing Order
+	List<NE__Order__c> newOrderList = new List<NE__Order__c>();
+	for (NE__Order__c sourceOrder : [SELECT Id, Name, CNT_Change_Type__c FROM NE__Order__c WHERE CNT_Case__c IN: (caseIds) ] ){
+		sourceOrder.CNT_Change_Type__c = '1-Alteração de Tarifa';// orderCaseMap.get(sourceOrder.Id).CNT_Change_Type__c;
+		newOrderList.add(sourceOrder); 
+	}
+
+	if(newOrderList.size() > 0 ) { update newOrderList; }
+	if(orderCaseMap.values().size() > 0 ) { update orderCaseMap.values(); }
+	if(updateContracts.size() > 0 ) { update updateContracts; }
+	if(listBackOffice.size() > 0 ) { Insert listBackOffice; }
+
+	System.debug(':: <<< CREATE CASES SUCCESS >>> '); 
+
+} catch (Exception ex){
+	System.debug(':: ERROR >>> '+ex.getStackTraceString() +' | '+ ex.getMessage() + ' | '+ex.getCause());
+	return;
+}

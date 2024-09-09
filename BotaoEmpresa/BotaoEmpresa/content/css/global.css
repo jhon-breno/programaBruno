@@ -1,0 +1,1098 @@
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: "Enel Roobert Regular";
+    src: url("font/universLight.eot?#iefix");
+    src: url("font/universLight.eot?#iefix") format("eot"), url("font/universLight.woff2") format("woff2"), url("font/universLight.woff") format("woff"), url("font/universLight.ttf") format("truetype"), url("font/universLight.svg#5b3db534-b1d7-4c58-aa51-0075f2fe9739") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Enel Roobert Regular";
+    src: url("font/univers.eot?#iefix");
+    src: url("font/univers.eot?#iefix") format("eot"), url("font/univers.woff2") format("woff2"), url("font/univers.woff") format("woff"), url("font/univers.ttf") format("truetype"), url("font/univers.svg#d7d2f6ed-1dde-4178-9353-bdd0821e77cb") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Enel Roobert Regular";
+    src: url("font/universBold.eot?#iefix");
+    src: url("font/universBold.eot?#iefix") format("eot"), url("font/universBold.woff2") format("woff2"), url("font/universBold.woff") format("woff"), url("font/universBold.ttf") format("truetype"), url("font/universBold.svg#1e2c0a36-e8bb-4e3b-a4ca-dec00221c06e") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Enel Roobert Light";
+    src: url("font/universLight.woff2");
+}
+
+@font-face {
+    font-family: "Enel Roobert Regular";
+    src: url("font/univers.woff2");
+}
+
+@font-face {
+    font-family: "Enel Roobert Bold";
+    src: url("font/universBold.woff2");
+}
+
+@font-face {
+    font-family: "Enel Roobert Light";
+    src: url("font/Fonte Roobert/web/RoobertENEL-Light.woff2");
+}
+
+@font-face {
+    font-family: "Enel Roobert Regular";
+    src: url("font/Fonte Roobert/web/RoobertENEL-Regular.woff2");
+}
+
+@font-face {
+    font-family: "Enel Roobert Bold";
+    src: url("font/Fonte Roobert/web/RoobertENEL-Bold.woff2");
+}
+
+html {
+    font-size: 16;
+}
+
+.gridlock {
+    width: 100%;
+    max-width: 1284px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    border-radius: 0;
+    box-sizing: border-box;
+    min-width: 160px;
+    min-height: 49px;
+}
+
+    .btn.btn-sm {
+        min-width: 0;
+        min-height: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn.btn-blue {
+        border: 2px solid #41b9e6;
+        background-color: transparent;
+        color: #41b9e6;
+    }
+
+    .btn.btn-black {
+        border: 3px solid #222222;
+        background-color: transparent;
+        color: #222222;
+    }
+
+        .btn.btn-black:hover {
+            border: 3px solid #222222;
+            background-color: #222222;
+            color: #FFFFFF;
+        }
+
+    .btn.btn-transparent {
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-family: "Enel Roobert Bold";
+    }
+
+        .btn.btn-transparent:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+.button {
+    border: 2px solid #FFFFFF;
+    border-radius: 0;
+    box-sizing: border-box;
+    min-width: 160px;
+    min-height: 49px;
+    text-transform: uppercase;
+    font-family: "Enel Roobert Regular";
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    color: #FFFFFF;
+    line-height: 45px;
+    font-size: 0.75rem;
+    display: block;
+}
+
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button.small {
+        min-width: 0;
+        min-height: 0;
+        width: 43px;
+        height: 43px;
+    }
+
+#header {
+    display: block;
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    /* display: block;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;*/
+}
+
+@media (min-width: 1260px) {
+    #header {
+        position: fixed;
+    }
+}
+
+#header a {
+    color: #FFFFFF;
+    font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+    font-size: 0.8125rem;
+}
+
+#header .logo {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    width: 80px;
+    position: relative;
+    z-index: 51;
+}
+
+    #header .logo a img {
+        width: 100%;
+    }
+
+        #header .logo a img.ontop {
+            display: block;
+        }
+
+        #header .logo a img.onscroll {
+            display: none;
+        }
+
+#header .nav-wrapper {
+    display: none;
+}
+
+@media (min-width: 1260px) {
+    #header .nav-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 50;
+    }
+}
+
+#header .nav-wrapper .main-nav {
+    /*display: inline-block;
+      text-align: center;
+      margin: 0 auto;*/
+}
+
+@media (min-width: 1260px) {
+    #header .nav-wrapper .main-nav {
+        display: table-cell;
+        margin: 0 auto;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+#header .nav-wrapper .main-nav a {
+    font-family: 'Enel Roobert Bold', 'Helvetica', sans-serif;
+    font-size: 0.8125rem;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+#header .nav-aux {
+    display: inline-block;
+    height: 35px;
+    float: right;
+    vertical-align: top;
+    position: relative;
+    z-index: 51;
+}
+
+    #header .nav-aux .nav-aux-item {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+        color: #FFFFFF;
+        padding: 0 3px;
+    }
+
+        #header .nav-aux .nav-aux-item.locale {
+            display: none;
+        }
+
+@media (min-width: 1260px) {
+    #header .nav-aux .nav-aux-item.locale {
+        display: table-cell;
+    }
+
+        #header .nav-aux .nav-aux-item.locale a {
+            /*display: block;
+            width: 100%;
+            height: 100%;*/
+            font-weight: 700;
+            padding: 2px;
+            position: relative;
+        }
+
+            #header .nav-aux .nav-aux-item.locale a.active {
+                border-bottom: 4px solid rgb(255, 255, 255);
+                padding-top: 4px;
+            }
+}
+
+#header .nav-aux .nav-aux-item.divisor {
+    display: none;
+}
+
+@media (min-width: 1260px) {
+    #header .nav-aux .nav-aux-item.divisor {
+        display: table-cell;
+    }
+}
+
+#header .nav-aux .nav-aux-item.search {
+    display: none;
+}
+
+    #header .nav-aux .nav-aux-item.search a {
+        font-size: 1.25rem;
+    }
+
+@media (min-width: 1260px) {
+    #header .nav-aux .nav-aux-item.search {
+        display: table-cell;
+    }
+}
+
+#header .nav-aux .nav-aux-item.subnav .ontop {
+    display: block;
+}
+
+#header .nav-aux .nav-aux-item.subnav .onscroll {
+    display: none;
+}
+
+#header .nav-aux .nav-aux-item a {
+    display: block;
+    padding: 0 5px;
+}
+
+    #header .nav-aux .nav-aux-item a img {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+#mob-nav {
+    display: block;
+    width: 0;
+    max-width: 450px;
+    background-color: #ff0f64;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 52;
+    overflow: hidden;
+}
+
+@media (min-width: 1260px) {
+    #mob-nav {
+        position: fixed;
+    }
+}
+
+@media (min-width: 768px) {
+    #mob-nav {
+        max-width: 360px;
+        height: 1000px;
+    }
+}
+
+#mob-nav a {
+    color: #FFFFFF;
+    font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+    font-size: 0.8125rem;
+}
+
+#mob-nav .mob-nav-header {
+    display: table;
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+    background-color: #e50d5a;
+}
+
+    #mob-nav .mob-nav-header .mob-nav-locale {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        #mob-nav .mob-nav-header .mob-nav-locale li {
+            display: inline-block;
+            margin-right: 5px;
+            text-align: center;
+        }
+
+            #mob-nav .mob-nav-header .mob-nav-locale li a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-weight: 700;
+                padding: 2px;
+            }
+
+                #mob-nav .mob-nav-header .mob-nav-locale li a.active:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background-color: #FFFFFF;
+                    margin-top: 4px;
+                }
+
+    #mob-nav .mob-nav-header .close-nav {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+#mob-nav .mob-nav-content {
+    padding: 20px 40px;
+    height: auto;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    #mob-nav .mob-nav-content {
+        heigth: 1000px;
+    }
+}
+
+#mob-nav .mob-nav-content .subnav-title {
+    display: block;
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+}
+
+#mob-nav .mob-nav-content .mob-nav-wrapper {
+    padding: 0;
+}
+
+    #mob-nav .mob-nav-content .mob-nav-wrapper .mob-nav-item {
+        margin: 30px 0;
+    }
+
+        #mob-nav .mob-nav-content .mob-nav-wrapper .mob-nav-item a {
+            display: block;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8125rem;
+            position: relative;
+        }
+
+            #mob-nav .mob-nav-content .mob-nav-wrapper .mob-nav-item a.active:before {
+                content: '';
+                display: block;
+                width: 5px;
+                height: 20px;
+                background-color: #FFFFFF;
+                position: absolute;
+                top: 0;
+                left: -15px;
+            }
+
+        #mob-nav .mob-nav-content .mob-nav-wrapper .mob-nav-item .mob-subnav {
+            padding: 0;
+        }
+
+            #mob-nav .mob-nav-content .mob-nav-wrapper .mob-nav-item .mob-subnav .mob-subnav-item {
+                margin: 10px 0;
+            }
+
+                #mob-nav .mob-nav-content .mob-nav-wrapper .mob-nav-item .mob-subnav .mob-subnav-item a {
+                    display: block;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    font-size: 1.125rem;
+                }
+
+footer {
+    display: block;
+    width: 100%;
+    background-color: #222222;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    footer {
+        min-height: 100px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+footer .socials {
+    border-bottom: 1px solid #757575;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    footer .socials {
+        border: none;
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        float: right;
+        text-align: right;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+footer .socials .social-title {
+    font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: -0.015em;
+    color: #757575;
+}
+
+@media (min-width: 768px) {
+    footer .socials .social-title {
+        display: inline-block;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    footer .socials .social-icons {
+        display: inline-block;
+    }
+}
+
+footer .socials .social-icons .social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 2px solid #41b9e6;
+    color: #41b9e6;
+    margin-right: 20px;
+}
+
+    footer .socials .social-icons .social-icon:last-child {
+        margin-right: 0;
+    }
+
+footer .copyright {
+    font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 0.8125rem;
+    padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+    footer .copyright {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        float: left;
+        text-align: left;
+    }
+}
+
+footer .copyright span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #757575;
+}
+
+footer .copyright .copyright-text {
+    color: #757575;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    footer .copyright .copyright-text {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+@media (min-width: 768px) {
+    footer .copyright .copyright-text span {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+footer .copyright .footer-link {
+    line-height: 1.5rem;
+    color: #41b9e6;
+}
+
+@media (min-width: 768px) {
+    footer .copyright .footer-link {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.contato {
+    padding-top: 55px;
+    font-family: Enel Roobert Regular;
+    padding-left: 25px;
+    margin-bottom: 55px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+    .contato {
+        height: 470px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contato .telefones {
+        padding-left: 10%;
+        display: block;
+        width: 55%;
+        float: left;
+        box-sizing: border-box;
+    }
+}
+
+.contato .telefones .title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.contato .telefones .telefone .nome {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #666666;
+}
+
+.contato .telefones .telefone .numero {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff0f64;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 1260px) {
+    .contato .telefones .telefone.central-relacionamento {
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1260px) {
+    .contato .telefones .telefone.central-relacionamento-celular {
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contato .midias-sociais {
+        padding-left: 80px;
+        position: relative;
+        display: inline-block;
+        width: 45%;
+        float: right;
+        box-sizing: border-box;
+    }
+}
+
+.contato .midias-sociais .title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 55px;
+}
+
+.contato .midias-sociais .midia-social .descricao {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 1.375rem;
+    color: #666666;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.contato .midias-sociais .midia-social a {
+    border: 3px solid #41b9e6;
+    color: #41b9e6;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+    .contato .midias-sociais .midia-social a.button-small {
+        min-height: 49px;
+        min-width: 49px;
+        width: 49px;
+        height: 49px;
+        line-height: 49px;
+    }
+
+@media (min-width: 1260px) {
+    .contato .midias-sociais .midia-social a.button-small:hover {
+        background-color: rgba(65, 185, 230, 0.5);
+    }
+}
+
+.contato .midias-sociais .midia-social a i {
+    font-size: 1.375rem;
+}
+
+@media (min-width: 768px) {
+    .contato .midias-sociais:before {
+        content: '';
+        height: 100%;
+        bottom: 5%;
+        left: -2px;
+        width: 2px;
+        position: absolute;
+        background-color: #dddddd;
+    }
+}
+
+body {
+    background-color: #efefef;
+}
+
+.modal {
+    display: block;
+    width: 100%;
+    height: 0px;
+    font-family: "Enel Roobert Regular";
+    box-sizing: border-box;
+    background-color: #ff0f64;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    overflow: hidden;
+}
+
+    .modal .modal-header {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+        .modal .modal-header .locale-n-close {
+            display: block;
+            float: right;
+        }
+
+            .modal .modal-header .locale-n-close .mob-nav-locale {
+                display: table;
+            }
+
+                .modal .modal-header .locale-n-close .mob-nav-locale li {
+                    display: table-cell;
+                    padding: 0 10px;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+                    .modal .modal-header .locale-n-close .mob-nav-locale li a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        font-weight: 700;
+                        color: #FFFFFF;
+                        position: relative;
+                    }
+
+                    .modal .modal-header .locale-n-close .mob-nav-locale li.active a:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        background-color: #FFFFFF;
+                        position: absolute;
+                        bottom: -5px;
+                    }
+
+    .modal .container {
+        display: block;
+        vertical-align: middle;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        .modal .container .subtitle {
+            display: block;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            width: 100%;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+@media (min-width: 768px) {
+    .modal .container .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal .container .form {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+}
+
+.modal .container .form input {
+    display: block;
+    border: 2px solid #9f1143;
+    background-color: #ff0f64;
+    padding-left: 10px;
+    margin: 5px auto 5px auto;
+    width: 270px;
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .modal .container .form input {
+        display: inline-block;
+    }
+}
+
+.modal .container .form input:-moz-placeholder {
+    color: #FFFFFF;
+    font-size: 0.8125rem;
+}
+
+.modal .container .form input:-ms-input-placeholder {
+    color: #FFFFFF;
+    font-size: 0.8125rem;
+}
+
+.modal .container .form input::-webkit-input-placeholder {
+    color: #FFFFFF;
+    font-size: 0.8125rem;
+}
+
+.modal .container .form .button {
+    width: 160px;
+    height: 55px;
+    margin: 15px auto 0 auto;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .modal .container .form .button {
+        display: inline-block;
+    }
+}
+
+.modal .container .access-links {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .modal .container .access-links .access-link {
+        display: block;
+        font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+        font-weight: 700;
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        line-height: 28px;
+        padding: 0 20px;
+    }
+
+@media (min-width: 768px) {
+    .modal .container .access-links .access-link {
+        display: inline-block;
+    }
+}
+
+.modal .container .available-services {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+}
+
+@media (min-width: 1260px) {
+    .modal .container .available-services {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        margin: 60px auto 0 auto;
+    }
+}
+
+.modal .container .available-services .available-service {
+    display: block;
+    font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 25px;
+    color: #9f1143;
+}
+
+@media (min-width: 768px) {
+    .modal .container .available-services .available-service {
+        font-size: 1.4375rem;
+        line-height: 40px;
+    }
+}
+
+.modal .container .available-services .available-service.active {
+    color: #FFFFFF;
+}
+
+.busca .container {
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+    .busca .container .subtitle {
+        display: block;
+        vertical-align: middle;
+        text-align: left;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        width: 100%;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+@media (min-width: 768px) {
+    .busca .container .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .busca .container .busca-form {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 60px;
+        margin-left: 100px;
+    }
+}
+
+.busca .container .busca-form input {
+    display: block;
+    border: 0;
+    background-color: #ff0f64;
+    padding-left: 30px;
+    margin: 50px auto 5px auto;
+    width: 80%;
+    height: 50px;
+    font-size: 3.125rem;
+    color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+    .busca .container .busca-form input {
+        display: inline-block;
+    }
+}
+
+.busca .container .busca-form input:-moz-placeholder {
+    color: rgba(128, 128, 128, 0.1);
+    font-size: 3.125rem;
+}
+
+.busca .container .busca-form input:-ms-input-placeholder {
+    color: rgba(128, 128, 128, 0.1);
+    font-size: 3.125rem;
+}
+
+.busca .container .busca-form input::-webkit-input-placeholder {
+    color: rgba(128, 128, 128, 0.1);
+    font-size: 3.125rem;
+}
+
+.busca .container .busca-form button.src-button {
+    width: auto;
+    height: auto;
+    margin: 15px auto 0 auto;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 0;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .busca .container .busca-form button.src-button {
+        display: inline-block;
+    }
+}
+
+.busca .container .busca-form button.src-button i {
+    font-size: 4.375rem;
+}
+
+.busca .container .access-links {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+}
+
+    .busca .container .access-links .access-link {
+        display: block;
+        font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+        font-weight: 700;
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        line-height: 28px;
+        padding: 0 20px;
+    }
+
+@media (min-width: 768px) {
+    .busca .container .access-links .access-link {
+        display: inline-block;
+    }
+}
+
+.busca .container .quick-acess {
+    margin: 80px 0 10px 220px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+.busca .container .available-services {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+}
+
+@media (min-width: 1260px) {
+    .busca .container .available-services {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        margin: 20px 0 0 180px;
+    }
+}
+
+.busca .container .available-services .available-service {
+    display: block;
+    font-family: "Enel Roobert Regular", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 25px;
+    color: #9f1143;
+}
+
+@media (min-width: 768px) {
+    .busca .container .available-services .available-service {
+        font-size: 1.125rem;
+        line-height: 40px;
+        color: #FFFFFF;
+    }
+}
+
+.busca .container .available-services .available-service.active {
+    color: #FFFFFF;
+}
+
+
+
+.seta-dropdown-global {
+    float: right;
+    right: 5%;
+    position: absolute;
+    top: 35px;
+    z-index: -1;
+    color: #ff0f64;
+}

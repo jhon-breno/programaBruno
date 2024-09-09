@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBDC4395-CF3E-4754-82D1-A2AD195C3E27}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>sf_PQY_icon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SalesforceExtractor</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SalesforceExtractor</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="IBM.Data.Informix, Version=4.0.0.2, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Configurações\IBM.Data.Informix.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.5.11\lib\net40-client\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Autenticacao.cs" />
+    <Compile Include="Dados\AltaContratacaoDAO.cs" />
+    <Compile Include="Dados\AltaContratacaoGADAO.cs" />
+    <Compile Include="Dados\AltaContratacaoGBDAO.cs" />
+    <Compile Include="Dados\ExtratorGA.cs" />
+    <Compile Include="Dados\ExtratorGB.cs" />
+    <Compile Include="Dados\Extrator.cs" />
+    <Compile Include="Dados\ExtratorFactory.cs" />
+    <Compile Include="Dados\ArquivoLoader.cs" />
+    <Compile Include="Dados\InformixBase\DbInformix.cs" />
+    <Compile Include="Dados\Querier\CondicaoSql.cs" />
+    <Compile Include="Dados\SalesForce\SalesforceDAO.cs" />
+    <Compile Include="Dados\SalesForce\SynergiaDAO.cs" />
+    <Compile Include="Entidades\EnelxContractLine.cs" />
+    <Compile Include="Entidades\EnelxContrato.cs" />
+    <Compile Include="Entidades\EnelxAsset.cs" />
+    <Compile Include="Entidades\CaseStatus.cs" />
+    <Compile Include="Entidades\EntidadeConversor.cs" />
+    <Compile Include="Entidades\EntidadeFactory.cs" />
+    <Compile Include="Entidades\B2WinDTO.cs" />
+    <Compile Include="Entidades\ContractLineItemGoverno.cs" />
+    <Compile Include="Entidades\ContratoColetivoEntrada.cs" />
+    <Compile Include="Entidades\ContractSalesforce.cs" />
+    <Compile Include="Entidades\Invoice.cs" />
+    <Compile Include="Entidades\GeracaoDistribuidaDTO.cs" />
+    <Compile Include="Entidades\ItemAttributeGB.cs" />
+    <Compile Include="Entidades\OrderItemSalesforce.cs" />
+    <Compile Include="Entidades\OrderSalesforce.cs" />
+    <Compile Include="Entidades\ContractLineItemSalesforce.cs" />
+    <Compile Include="Entidades\OrderItemAttribute.cs" />
+    <Compile Include="Entidades\DebitoAutomatico.cs" />
+    <Compile Include="Entidades\AddressSalesforce.cs" />
+    <Compile Include="Entidades\Arquivo.cs" />
+    <Compile Include="Entidades\AccountSalesforce.cs" />
+    <Compile Include="Entidades\AtendimentoURA.cs" />
+    <Compile Include="Entidades\AssetDTOCorretivo.cs" />
+    <Compile Include="Entidades\ParAtividadeSalesforce.cs" />
+    <Compile Include="Entidades\CaseSalesforce.cs" />
+    <Compile Include="Entidades\BillingSalesforce.cs" />
+    <Compile Include="Entidades\Modif\Contact.cs" />
+    <Compile Include="Entidades\ParRelatorioEmergencia.cs" />
+    <Compile Include="Entidades\Atividade.cs" />
+    <Compile Include="Entidades\TalendSalesforce.cs" />
+    <Compile Include="Entidades\SalesGeralDTO.cs" />
+    <Compile Include="Entidades\AssetDTO.cs" />
+    <Compile Include="Entidades\ItemAttribute.cs" />
+    <Compile Include="Entidades\DeviceSalesforce.cs" />
+    <Compile Include="Entidades\Enumeracoes\DicColuna.cs" />
+    <Compile Include="Entidades\Enumeracoes\SFDCDataModels.cs" />
+    <Compile Include="Entidades\DocumentoRedeSocial.cs" />
+    <Compile Include="Entidades\ClienteSalesforce.cs" />
+    <Compile Include="Entidades\Enumeracoes\TipoClienteEnum.cs" />
+    <Compile Include="Entidades\ExtracaoSalesForce.cs" />
+    <Compile Include="Entidades\Modif\Device.cs" />
+    <Compile Include="Entidades\Modif\Account.cs" />
+    <Compile Include="Entidades\Modif\Consumption.cs" />
+    <Compile Include="Entidades\Modif\ItemEntidade.cs" />
+    <Compile Include="Entidades\Modif\ModifBase.cs" />
+    <Compile Include="Entidades\Modif\PointOfDelivery.cs" />
+    <Compile Include="Entidades\Street.cs" />
+    <Compile Include="IO.cs" />
+    <Compile Include="Negocio.cs" />
+    <Compile Include="Negocio\AccountBO.cs" />
+    <Compile Include="Negocio\CasoBO.cs" />
+    <Compile Include="Negocio\CadastroBO.cs" />
+    <Compile Include="Negocio\NegocioBase.cs" />
+    <Compile Include="Negocio\ContractLineItemBO.cs" />
+    <Compile Include="Negocio\OrderBO.cs" />
+    <Compile Include="Negocio\EnelxBO.cs" />
+    <Compile Include="Negocio\TrocaTitularidadeBO.cs" />
+    <Compile Include="Negocio\ReflectiveEnumerator.cs" />
+    <Compile Include="Negocio\ConsultarSynergia.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WsCorte\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SFDC_Oracle_Helper.cs" />
+    <Compile Include="SFDC_Oracle_Scheme.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\EnumString.cs" />
+    <Compile Include="Utils\ModifAttribute.cs" />
+    <Compile Include="Utils\Log.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="Web References\apexMetadata\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\apex\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\QuerySalesForceA.sql" />
+    <None Include="Resources\QuerySalesForceB.sql" />
+    <None Include="Resources\QuerySalesForceModif.sql" />
+    <None Include="Resources\QuerySalesForceRelModif.sql" />
+    <None Include="Service References\WsCorte\GetCorteEnergia2.disco" />
+    <None Include="Service References\WsCorte\configuration91.svcinfo" />
+    <None Include="Service References\WsCorte\configuration.svcinfo" />
+    <None Include="Service References\WsCorte\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="sf_PQY_icon.ico" />
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\dev\sforce\API 10.0\metadata.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\apexMetadata\</RelPath>
+      <UpdateFromURL>C:\dev\sforce\API 10.0\metadata.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>basicSample_cs_p_apexMetadata_MetadataService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="1%27">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\apex\</RelPath>
+      <UpdateFromURL>1%27</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>basicSample_cs_p_apex_SforceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WsCorte\GetCorteEnergia2.wsdl" />
+    <None Include="Service References\WsCorte\SalesforceExtractor.WsCorte.Corte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Web References\apexMetadata\AsyncResult3.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apexMetadata\metadata.wsdl" />
+    <None Include="Web References\apexMetadata\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\apex\DeleteResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\DescribeGlobalResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\DescribeLayoutResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\DescribeSObjectResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\DescribeSoftphoneLayoutResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\DescribeTabSetResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\EmptyRecycleBinResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\GetDeletedResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\GetServerTimestampResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\GetUpdatedResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\GetUserInfoResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\LeadConvertResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\LoginResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\MergeResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\partner.wsdl" />
+    <None Include="Web References\apex\ProcessResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\QueryResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\apex\ResetPasswordResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\SaveResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\SearchResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\SendEmailResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\SetPasswordResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\sObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\UndeleteResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\apex\UpsertResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WsCorte\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

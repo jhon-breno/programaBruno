@@ -1,0 +1,564 @@
+﻿using Pangea.Dados;
+using Pangea.Dados.Base;
+using Pangea.Entidades.Enumeracao;
+using Pangea.Util;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Pangea.Swat.UI.Negocio
+{
+    public class Cliente
+    {
+        private Empresa empresa;
+        string codEmpresa;
+        private TipoCliente tipo;
+        private ClienteDAO dao;
+        private List<Pangea.Entidades.Cliente> lstClientesFilhos = new List<Pangea.Entidades.Cliente>();
+        private Dictionary<string, Pangea.Entidades.Cliente> dicClientesTodos = new Dictionary<string, Pangea.Entidades.Cliente>();
+        private Dictionary<int, int> dicClientesAnteriores = new Dictionary<int, int>();
+        private Dictionary<int, int> dicClientesAtuais = new Dictionary<int, int>();
+
+        string _arqLog;
+
+        public Cliente(Empresa empresa, TipoCliente tipo)
+        {
+            this.empresa = empresa;
+            this.tipo = tipo;
+            this._arqLog = string.Format("C:\\Temp\\CLIENTE_ANTERIOR_{0}_{1}_LOG", this.codEmpresa, DateTime.Now.ToString("yyyy-MM-dd-HH-mm"));
+            
+            if (this.dao == null)
+            {
+                this.dao = new ClienteDAO(this.empresa);
+                this.codEmpresa = ((int)empresa).ToString();
+            }
+        }
+
+
+        /// <summary>
+        /// Grava arquivo com todos os clientes anteriores, desde o primeiro até o cliente atual.
+        /// </summary>
+        /// <param name="arquivo"></param>
+        /// <returns></returns>
+        public string GerarRelatorioClienteAnterior(string arquivo)
+        {
+            //TODO: carregar numero_cliente, tipo_cliente, cliente_anterior, tipo_documento, documento
+            //var clientes = (from lista in dao.Consultar("select numero_cliente, cliente_anterior from cliente").AsEnumerable()
+            //                select new {
+            //                    numero = lista.Field<int>("numero_cliente"),
+            //                    anterior = lista.Field<int>("cliente_anterior") }
+            //                    );
+            //List<int> todos = dao.Consultar("select numero_cliente, cliente_anterior from cliente").AsEnumerable().Select(new { cliente =  x => x.Field<int>("numero_cliente")).ToList();
+
+            arquivo = "c:\\temp\\cliente_anterior\\190117\\clientesTodos.txt";
+            if (string.IsNullOrWhiteSpace(arquivo))
+            {
+                return "Informe o arquivo de entrada com os clientes a serem processados.";
+            }
+
+            //validar arquivo de entrada
+            if (!File.Exists(arquivo))
+                return string.Format("Arquivo '{0}' não encontrado.", arquivo);
+
+            //arquivos de entrada e saída
+            StringBuilder sb = new StringBuilder();
+            StringBuilder _sbNomeArq = new StringBuilder();
+            StringBuilder _arqFinal = new StringBuilder();
+            int cont = 0;
+            //int total = 0;
+            int numeroCliente;
+
+            using (StreamReader sr = new StreamReader(arquivo, Encoding.GetEncoding("iso-8859-1")))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string linha = sr.ReadLine();
+                    string[] campos = linha.Split('|');
+                    Pangea.Entidades.Cliente cliAux = new Pangea.Entidades.Cliente();
+                    cliAux.Numero_cliente = campos[0];
+                    cliAux.Cliente_anterior = campos[1];
+                    cliAux.Rut = campos[4];
+                    cliAux.Tipo_Ident = campos[3];
+                    cliAux.Nombre = campos[6].Trim().Replace("\\", string.Empty);
+                    //_lstClientes.Add(cliAux);
+                    try
+                    {
+                        this.dicClientesTodos.Add(campos[0], cliAux);
+                        this.dicClientesAnteriores.Add(Convert.ToInt32(campos[0]), Convert.ToInt32(string.IsNullOrWhiteSpace(campos[1]) ? "0" : campos[1]));
+                    }
+                    catch (Exception ex)
+                    {
+                        continue;
+                    }
+                }
+            }
+
+            string _arqSaida = string.Format("C:\\Temp\\cliente_anterior\\190117\\CLIENTE_ANTERIOR_{0}_{1}", this.codEmpresa, DateTime.Now.ToString("yyyy-MM-dd-HH-mm"));
+
+            if (File.Exists(string.Concat(_arqSaida, ".txt")))
+                File.Delete(string.Concat(_arqSaida, ".txt"));
+
+            //controles para o contrúdo do arquivo de saída
+            StringBuilder _conteudo = new StringBuilder();
+            StringBuilder _externalId = new StringBuilder();
+            StringBuilder _clienteAnterior = new StringBuilder();
+
+            arquivo = "c:\\temp\\cliente_anterior\\190117\\clienteAnterior_CE_GB.txt";  //lista de clientes selecionados da base ,com cliente_anterior, ordenado por numero_cliente DESCENDENTE
+            using (StreamReader sr = new StreamReader(arquivo, Encoding.GetEncoding("iso-8859-1")))
+            {
+                while (cont >= 0)
+                {
+                    this.lstClientesFilhos.Clear();
+
+                    _sbNomeArq.Clear();
+                    _arqFinal.Clear();
+
+                    if (sr.EndOfStream)
+                    {
+                        cont = -1;
+                        continue;
+                    }
+
+                    try
+                    {
+                        var linha = sr.ReadLine();
+                        if (string.IsNullOrWhiteSpace(linha))
+                            continue;
+
+                        if (!Int32.TryParse(linha, out numeroCliente))
+                            continue;
+
+                        if (File.Exists(string.Concat(_arqFinal, ".txt")))
+                            File.Delete(string.Concat(_arqFinal, ".txt"));
+
+                        Pangea.Entidades.Cliente _clientePai;
+
+                        //string cliteste = "7339353";
+                        //var teste = _lista3.Values.Where(c => c.Cliente_anterior == cliteste);
+
+                        //string clienteAtual = GetClienteAtual(numeroCliente);
+
+                        try
+                        {
+                            _clientePai = BuscarClienteOriginal(linha);
+                        }
+                        catch (KeyNotFoundException ex)
+                        {
+                            continue;
+                            //TODO: logar cliente nao encontrado????
+                        }
+
+                        //impede a repetição da busca de clientes já identificados
+                        if (this.dicClientesAtuais.Keys.Contains(numeroCliente))
+                            continue;
+
+                        for (int i = 0; i < this.lstClientesFilhos.Count; i++)
+                        {
+                            int tempNumeroCliente = Convert.ToInt32(this.lstClientesFilhos[i].Numero_cliente);
+                            if (!this.dicClientesAtuais.Keys.Contains(tempNumeroCliente))
+                                this.dicClientesAtuais.Add(tempNumeroCliente, tempNumeroCliente);
+
+                            _externalId.Clear();
+                            _clienteAnterior.Clear();
+
+                            _clienteAnterior.Append((this.lstClientesFilhos[i].Cliente_anterior == null || "0".Equals(this.lstClientesFilhos[i].Cliente_anterior)) ? string.Empty : lstClientesFilhos[i].Cliente_anterior);
+
+                            if (string.IsNullOrWhiteSpace(this.lstClientesFilhos[i].Nombre) || this.lstClientesFilhos[i].Nombre.Contains("CONSUMIDOR ATUALIZE"))
+                            {
+                                //DESPERSONALIZADO
+                                _externalId.Append(string.Concat(this.codEmpresa, "D", this.lstClientesFilhos[0].Numero_cliente));
+                                lstClientesFilhos[i].Nombre = string.Empty;
+                            }
+                            else if (string.IsNullOrWhiteSpace(this.lstClientesFilhos[i].Rut) || this.lstClientesFilhos[i].Rut.Contains("INVALIDO") || lstClientesFilhos[i].TipoDocumento == TipoDocumento.NaoIdentificado)
+                            {
+                                //DOC INVALIDO
+                                _externalId.Append(string.Concat(this.codEmpresa, this.lstClientesFilhos[i].Numero_cliente, "INVALIDO"));
+                            }
+                            else
+                            {
+                                    #region Formato da apresentação dos documentos
+
+                                    string auxDoc = string.Empty;
+                                    string descricaoDoc = EnumString.GetStringValue(this.lstClientesFilhos[i].TipoDocumento);
+
+                                    try
+                                    {
+                                        if (this.lstClientesFilhos[i].TipoDocumento == TipoDocumento.CNPJ)
+                                            auxDoc = Regex.Replace(this.lstClientesFilhos[i].Rut, " ", "").PadLeft(22,'0').Substring(22 - 14, 14);
+
+                                        else
+                                            auxDoc = Regex.Replace(this.lstClientesFilhos[i].Rut, " ", "").PadLeft(22, '0').Substring(22 - 11, 11);
+
+                                        if (!Validacao.ValidarCNPJ(auxDoc) && !Validacao.ValidarCPF(auxDoc))
+                                            throw new Exception();
+
+                                        _externalId.Append(string.Concat(codEmpresa, auxDoc, this.lstClientesFilhos[i].Dv_rut, descricaoDoc.Substring(3, descricaoDoc.Length - 3)));
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        _externalId.Append(string.Concat(codEmpresa, this.lstClientesFilhos[i].Numero_cliente, "INVALIDO"));
+                                    }
+
+                                    #endregion
+                            }
+
+                            _conteudo.AppendLine(string.Format("{0}|{1}|{2}|{3}", this.lstClientesFilhos[i].Numero_cliente, _clienteAnterior.ToString(), _externalId.ToString(), lstClientesFilhos[i].Nombre.Trim()));
+                        }
+
+                        if (cont == 199)
+                        {
+                            if (!IO.EscreverArquivo(_arqSaida, _conteudo.ToString(), null))
+                                throw new Exception(string.Format("Falha ao gravar o arquivo após o registro {0}", cont - 1));
+
+                            _conteudo.Clear();
+                            cont = 0;
+                        }
+
+                        //return string.Format("Encontrados {0} clientes relacionados ao cliente-pai.  Vide arquivo gerado.", _lstClientesFilhos.Count());;
+                        //IO.EscreverArquivo(_arqFinal.ToString(), jsonObj, null);
+                    }
+                    catch (Exception ex)
+                    {
+                        if (!IO.EscreverArquivo(_arqSaida, _conteudo.ToString(), null))
+                            throw ex;
+                    }
+                    cont++;
+                }   //fim while arquivo entrada
+            }
+
+            IO.EscreverArquivo(_arqSaida, _conteudo.ToString(), null);
+
+            return string.Format("Relatório processado.");
+        }
+
+
+
+
+        /// <summary>
+        /// Percorre toda a lista de clientes do arquivo de entrada, identificando cada registro com o External Id apropriado e o histórico de cliente anterior, desde sua origem.
+        /// </summary>
+        /// <param name="arquivo">Relação de clientes em ordem descrescente de Número de Cliente, que é a condição obrigatória.</param>
+        /// <returns></returns>
+        public string GerarRelatorioClienteAnteriorTodosClientes(string arquivo)
+        {
+            //arquivo = "c:\\temp\\cliente_anterior\\190117\\clientesTodos.txt";
+            //arquivo = "c:\\temp\\cliente_anterior\\190201\\clientesTodos.txt";
+            //arquivo = "c:\\temp\\cliente_anterior\\190225\\clientesTodos.txt";
+            arquivo = "c:\\temp\\cliente_anterior\\190228\\clientesTodos.txt";
+            string _arqSaida = string.Format("C:\\Temp\\cliente_anterior\\190228\\CLIENTE_ANTERIOR_{0}_{1}", this.codEmpresa, DateTime.Now.ToString("yyyy-MM-dd-HH-mm"));
+
+            if (string.IsNullOrWhiteSpace(arquivo))
+                return "Informe o arquivo de entrada com os clientes a serem processados.";
+
+            if (!File.Exists(arquivo))
+                return string.Format("Arquivo '{0}' não encontrado.", arquivo);
+
+            //arquivos de entrada e saída
+            StringBuilder sb = new StringBuilder();
+            StringBuilder _sbNomeArq = new StringBuilder();
+            StringBuilder _arqFinal = new StringBuilder();
+            int cont = 0;
+            //int total = 0;
+            int numeroCliente;
+
+            //select c.numero_cliente, c.cliente_anterior,
+            //        case    when nvl(d.tipo_documento,'') = '' THEN nvl(trim(c.rut),'') || nvl(trim(c.dv_rut),'')
+            //                else nvl(trim(d.numero_doc),'') || nvl(trim(d.dv_documento),'')
+            //        end documento_cliente,
+            //        case    when nvl(d.tipo_documento,'') = '' then trim(c.tipo_ident)
+            //                else trim(d.tipo_documento)
+            //        end tipo_identidade 
+            //        , c.nombre
+            //from cliente c, outer documento_cliente d
+            //where c.numero_cliente = d.numero_cliente
+            //--where ind_cli_despersona = 'S'
+            //order by 1 desc
+
+            using (StreamReader sr = new StreamReader(arquivo, Encoding.GetEncoding("iso-8859-1")))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string linha = sr.ReadLine();
+                    string[] campos = linha.Split('|');
+                    Pangea.Entidades.Cliente cliAux = new Pangea.Entidades.Cliente();
+
+                    cliAux.Numero_cliente = campos[0].Trim();
+                    cliAux.Cliente_anterior = campos[1].Trim();
+                    cliAux.Rut = campos[2].Trim();      //RUT || DV_RUT     <<<<<<<<<<<<-------- unificar os campos de documento na consulta original
+                    //if (cliAux.Rut.Length > 16)
+                    //{
+                    //    cliAux.Rut = "2003".Equals(cliAux.Rut.Substring(0, 4)) ?
+                    //                cliAux.Rut.Substring(4, (cliAux.Rut.Length - (cliAux.Rut.Length - 16))) :
+                    //                cliAux.Rut.Substring((cliAux.Rut.Length - 16), (cliAux.Rut.Length - (cliAux.Rut.Length - 16)));
+                    //}
+
+                    cliAux.Tipo_Ident = campos[3].Trim();
+                    cliAux.Nombre = campos[4].Trim().Replace("\\", string.Empty);
+                    cliAux.Empresa = campos[5].Trim();
+                    try
+                    {
+                        this.dicClientesTodos.Add(cliAux.Numero_cliente, cliAux);
+                        //this.dicClientesAnteriores.Add(Convert.ToInt32(campos[0]), Convert.ToInt32(string.IsNullOrWhiteSpace(campos[1]) ? "0" : campos[1]));
+                    }
+                    catch (Exception ex)
+                    {
+                        continue;
+                    }
+                }
+            }
+
+            if (File.Exists(string.Concat(_arqSaida, ".txt")))
+                File.Delete(string.Concat(_arqSaida, ".txt"));
+
+            //controles para o contrúdo do arquivo de saída
+            StringBuilder _conteudo = new StringBuilder();
+            StringBuilder _externalId = new StringBuilder();
+            StringBuilder _clienteAnterior = new StringBuilder();
+
+            foreach (KeyValuePair<string, Pangea.Entidades.Cliente> cli in this.dicClientesTodos)
+            {
+                _externalId.Clear();
+                _clienteAnterior.Clear();
+
+                this.lstClientesFilhos.Clear();
+
+                _sbNomeArq.Clear();
+                _arqFinal.Clear();
+
+                #region SEM CLIENTE ANTERIOR
+                if (string.IsNullOrEmpty(cli.Value.Cliente_anterior) || "0".Equals(cli.Value.Cliente_anterior))
+                {
+                    if (!string.IsNullOrWhiteSpace(cli.Value.Numero_cliente))
+                    {
+                        //impede a repetição da busca de clientes já identificados
+                        int tempNumeroCliente = Convert.ToInt32(cli.Value.Numero_cliente);
+                        if (this.dicClientesAtuais.Keys.Contains(tempNumeroCliente))
+                            continue;
+
+                        this.dicClientesAtuais.Add(tempNumeroCliente, tempNumeroCliente);
+                    }
+
+                    if (cli.Value.DespersonaSalesforce)
+                    {
+                        //DESPERSONALIZADO
+                        _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, "D", cli.Value.Numero_cliente));
+                        cli.Value.Nombre = string.Empty;
+                    }
+                    else if (string.IsNullOrWhiteSpace(cli.Value.Rut) || cli.Value.Rut.Contains("INVALIDO") || cli.Value.TipoDocumento == TipoDocumento.NaoIdentificado)
+                    {
+                        //DOC INVALIDO
+                        _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, cli.Value.Numero_cliente, "INVALIDO"));
+                    }
+                    else
+                    {
+                        #region Formato da apresentação dos documentos
+                        string auxDoc = string.Empty;
+                        string descricaoDoc = EnumString.GetStringValue(cli.Value.TipoDocumento);
+
+                        try
+                        {
+                            if (cli.Value.TipoDocumento == TipoDocumento.CNPJ)
+                                auxDoc = Regex.Replace(cli.Value.Rut, " ", "").PadLeft(22, '0').Substring(22 - 14, 14);
+
+                            else
+                                auxDoc = Regex.Replace(cli.Value.Rut, " ", "").PadLeft(22, '0').Substring(22 - 11, 11);
+
+                            if (!Validacao.ValidarCNPJ(auxDoc) && !Validacao.ValidarCPF(auxDoc))
+                                _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, cli.Value.Numero_cliente, "INVALIDO"));
+                            else
+                                _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, auxDoc, cli.Value.Dv_rut, descricaoDoc.Substring(3, descricaoDoc.Length - 3)));
+                        }
+                        catch (Exception ex)
+                        {
+                            _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, cli.Value.Numero_cliente, "INVALIDO"));
+                        }
+                        #endregion
+                    }
+
+                    _conteudo.AppendLine(string.Format("{0}|{1}|{2}|{3}|{4}", cli.Value.Numero_cliente, _clienteAnterior.ToString(), _externalId.ToString(), cli.Value.Nombre.Trim()));
+                }
+                #endregion
+
+                #region COM CLIENTE ANTERIOR
+                if (!string.IsNullOrWhiteSpace(cli.Value.Cliente_anterior) && !"0".Equals(cli.Value.Cliente_anterior))
+                {
+                    try
+                    {
+                        var linha = cli.Value.Numero_cliente;
+                        if (string.IsNullOrWhiteSpace(linha))
+                            continue;
+
+                        if (!Int32.TryParse(linha, out numeroCliente))
+                            continue;
+
+                        try
+                        {
+                            BuscarClienteOriginal(linha);
+                        }
+                        catch (KeyNotFoundException ex)
+                        {
+                            throw ex;
+                            //TODO: logar cliente nao encontrado????
+                        }
+
+                        for (int i = 0; i < this.lstClientesFilhos.Count; i++)
+                        {
+                            int tempNumeroCliente = Convert.ToInt32(this.lstClientesFilhos[i].Numero_cliente);
+
+                            //impede a repetição da busca de clientes já identificados
+                            if (this.dicClientesAtuais.Keys.Contains(tempNumeroCliente))
+                                continue;
+
+                            if (!this.dicClientesAtuais.Keys.Contains(tempNumeroCliente))
+                                this.dicClientesAtuais.Add(tempNumeroCliente, tempNumeroCliente);
+
+                            _externalId.Clear();
+                            _clienteAnterior.Clear();
+
+                            _clienteAnterior.Append((this.lstClientesFilhos[i].Cliente_anterior == null || "0".Equals(this.lstClientesFilhos[i].Cliente_anterior)) ? string.Empty : lstClientesFilhos[i].Cliente_anterior);
+
+                            if (this.lstClientesFilhos[i].DespersonaSalesforce)
+                            {
+                                //DESPERSONALIZADO
+                                _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, "D", this.lstClientesFilhos[0].Numero_cliente));
+                                lstClientesFilhos[i].Nombre = string.Empty;
+                            }
+                            else if (string.IsNullOrWhiteSpace(this.lstClientesFilhos[i].Rut) || this.lstClientesFilhos[i].Rut.Contains("INVALIDO") || lstClientesFilhos[i].TipoDocumento == TipoDocumento.NaoIdentificado)
+                            {
+                                //DOC INVALIDO
+                                _externalId.Append(string.Concat(cli.Value.CodigoEmpresa, this.lstClientesFilhos[i].Numero_cliente, "INVALIDO"));
+                            }
+                            else
+                            {
+                                #region Formato da apresentação dos documentos
+
+                                string auxDoc = string.Empty;
+                                string descricaoDoc = EnumString.GetStringValue(this.lstClientesFilhos[i].TipoDocumento);
+
+                                try
+                                {
+                                    if (this.lstClientesFilhos[i].TipoDocumento == TipoDocumento.CNPJ)
+                                        auxDoc = Regex.Replace(this.lstClientesFilhos[i].Rut, " ", "").PadLeft(22, '0').Substring(22 - 14, 14);
+                                    else
+                                        auxDoc = Regex.Replace(this.lstClientesFilhos[i].Rut, " ", "").PadLeft(22, '0').Substring(22 - 11, 11);
+
+
+                                    if (!Validacao.ValidarCNPJ(auxDoc) && !Validacao.ValidarCPF(auxDoc))
+                                        _externalId.Append(string.Concat(codEmpresa, this.lstClientesFilhos[i].Numero_cliente, "INVALIDO"));
+                                    else
+                                        _externalId.Append(string.Concat(codEmpresa, auxDoc, this.lstClientesFilhos[i].Dv_rut, descricaoDoc.Substring(3, descricaoDoc.Length - 3)));
+                                }
+                                catch (Exception ex)
+                                {
+                                    _externalId.Append(string.Concat(codEmpresa, this.lstClientesFilhos[i].Numero_cliente, "INVALIDO"));
+                                }
+
+                                #endregion
+                            }
+
+                            _conteudo.AppendLine(string.Format("{0}|{1}|{2}|{3}", this.lstClientesFilhos[i].Numero_cliente, _clienteAnterior.ToString(), _externalId.ToString(), lstClientesFilhos[i].Nombre.Trim()));
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        if (!IO.EscreverArquivo(_arqLog, cli.Value.Numero_cliente, null))
+                            throw ex;
+                    }
+                }
+                #endregion
+
+
+                if (cont == 9999)
+                {
+                    if (!IO.EscreverArquivo(_arqSaida, _conteudo.ToString(), null))
+                        throw new Exception(string.Format("Falha ao gravar o arquivo após o registro {0}", cont - 1));
+
+                    _conteudo.Clear();
+                    cont = 0;
+                }
+                cont++;
+            }
+
+            IO.EscreverArquivo(_arqSaida, _conteudo.ToString(), null);
+
+            _conteudo = null;
+            _externalId = null;
+            _clienteAnterior = null;
+            
+            return string.Format("Relatório processado.");
+        }
+
+        
+        
+        
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="empresa"></param>
+        /// <param name="clienteAnterior"></param>
+        /// <returns></returns>
+        private string GetClienteAtual(int clienteAnterior)
+        {
+            if (clienteAnterior <= 0)
+                return string.Empty;
+
+            string cli = clienteAnterior.ToString();
+
+            var cliTemp2 = dicClientesAnteriores.FirstOrDefault(c => c.Value == clienteAnterior);
+
+            try
+            {
+                if (cliTemp2.Key > 0)
+                    cli = GetClienteAtual(cliTemp2.Key);
+            }
+            catch(Exception ex)
+            {
+                IO.EscreverArquivo(_arqLog, clienteAnterior.ToString(), null);
+            }
+
+            return string.IsNullOrWhiteSpace(cli) ? clienteAnterior.ToString() : cli;
+        }
+        
+        
+        /// <summary>
+        /// Percorre recursivamente a lista de clientes pré-carregada e identifica os 'clientes anteriores', desde o cliente atual até o cliente original.
+        /// Necessário que a lista inicial de clientes-base esteja em ordem decrescente de número de cliente.
+        /// </summary>
+        /// <param name="numeroCliente">Cliente a partir do qual se deseja identificar os anteriores.</param>
+        /// <returns></returns>
+        private Pangea.Entidades.Cliente BuscarClienteOriginal(string numeroCliente)
+        {
+            try
+            {
+                var cliTemp2 = dicClientesTodos[numeroCliente];
+
+                while (cliTemp2 != null && !string.IsNullOrWhiteSpace(cliTemp2.Numero_cliente))
+                {
+                    if (!lstClientesFilhos.Contains(cliTemp2))
+                        lstClientesFilhos.Add(cliTemp2);
+
+                    if (string.IsNullOrWhiteSpace(cliTemp2.Cliente_anterior) || "0".Equals(cliTemp2.Cliente_anterior))
+                        return cliTemp2;
+
+                    cliTemp2 = BuscarClienteOriginal(cliTemp2.Cliente_anterior);
+                }
+
+                return cliTemp2;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+        }
+    }
+}

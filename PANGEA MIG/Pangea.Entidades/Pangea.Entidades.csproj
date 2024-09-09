@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEA88DB3-539D-40A5-BB4E-42DDB8CAAF5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Pangea.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendaFutura.cs" />
+    <Compile Include="AnulacaoCorte.cs" />
+    <Compile Include="Arquivo.cs" />
+    <Compile Include="Atendimentos\Atendimento.cs" />
+    <Compile Include="Atendimentos\Atendimento_PrevisaoCorte.cs" />
+    <Compile Include="Atendimentos\Motivos.cs" />
+    <Compile Include="Base\EntidadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\AcquisizioneLavoroLettura.cs" />
+    <Compile Include="DTO\AcquisizioneLavoroLetturaDTO.cs" />
+    <Compile Include="DTO\ActuacionSolicitudDTO.cs" />
+    <Compile Include="DTO\ActualizacionAgendaDTO.cs" />
+    <Compile Include="DTO\ActualizacionSequencialDTO.cs" />
+    <Compile Include="DTO\ActualizacionTecnicaContratacionDTO.cs" />
+    <Compile Include="DTO\AgendamentoDTO.cs" />
+    <Compile Include="DTO\AnagraficaDTO.cs" />
+    <Compile Include="DTO\CalendarioLeituraDTO.cs" />
+    <Compile Include="DTO\CalendFacturacionDTO.cs" />
+    <Compile Include="DTO\CargosTrabalhoDTO.cs" />
+    <Compile Include="DTO\ClienteCadAtendDTO.cs" />
+    <Compile Include="DTO\ConsumoFaturadoDTO.cs" />
+    <Compile Include="DTO\ClienteSmcDTO.cs" />
+    <Compile Include="DTO\ConsultaToiDTO.cs" />
+    <Compile Include="DTO\ContratoDTO.cs" />
+    <Compile Include="DTO\ContratoRetornoDTO.cs" />
+    <Compile Include="DTO\CorplazoDTO.cs" />
+    <Compile Include="DTO\CorteRepoDTO.cs" />
+    <Compile Include="DTO\CorteRepoDTOIn.cs" />
+    <Compile Include="DTO\CorteRepoSolicitadoDTO.cs" />
+    <Compile Include="DTO\DenunciaDTO.cs" />
+    <Compile Include="DTO\DocumentoDTO.cs" />
+    <Compile Include="DTO\EtapaDTO.cs" />
+    <Compile Include="DTO\FeriadoDTO.cs" />
+    <Compile Include="DTO\HeaderJSONSalida.cs" />
+    <Compile Include="DTO\LibOrdemDTO.cs" />
+    <Compile Include="DTO\HifcoDTO.cs" />
+    <Compile Include="DTO\MedidDTO.cs" />
+    <Compile Include="DTO\ModifDTO.cs" />
+    <Compile Include="DTO\NBDTO.cs" />
+    <Compile Include="DTO\NISDTO.cs" />
+    <Compile Include="DTO\OrdemServicoArtefatosDTO.cs" />
+    <Compile Include="DTO\ParamCorteRepoDTO.cs" />
+    <Compile Include="DTO\ParametroCorteRepoDTO.cs" />
+    <Compile Include="DTO\EntradaRetornoContracaoDTO.cs" />
+    <Compile Include="DTO\ParRetornoContrato.cs" />
+    <Compile Include="DTO\QuestoesDTO.cs" />
+    <Compile Include="DTO\AjusteFaturadoDTO.cs" />
+    <Compile Include="DTO\OcorrenciaCorteDTO.cs" />
+    <Compile Include="DTO\OrdemServicoDTO.cs" />
+    <Compile Include="DTO\RefaturamentoDTO.cs" />
+    <Compile Include="DTO\RepresentanteLegalDTO.cs" />
+    <Compile Include="DTO\RespuestaCorteRepoDTO.cs" />
+    <Compile Include="DTO\RessarcimentoDanosEletricosDTO.cs" />
+    <Compile Include="DTO\ResultadoCorteReconexaoDTO.cs" />
+    <Compile Include="DTO\ResultadoCorteRepoDTO.cs" />
+    <Compile Include="DTO\ResultadoInspeccionDTO.cs" />
+    <Compile Include="DTO\RetornoAltaContratoDTO.cs" />
+    <Compile Include="DTO\RetornoCorteRepoDTO.cs" />
+    <Compile Include="DTO\RegistradorDTO.cs" />
+    <Compile Include="DTO\RetornoResultadoCorteReconexaoDTO.cs" />
+    <Compile Include="DTO\RetornoSFDTO.cs" />
+    <Compile Include="DTO\RolDTO.cs" />
+    <Compile Include="DTO\SalidaResultadoCorteReconexionDTO.cs" />
+    <Compile Include="DTO\ServicoDTO.cs" />
+    <Compile Include="DTO\ServicosIntegracaoDTO.cs" />
+    <Compile Include="DTO\SolicitanteOrdemDTO.cs" />
+    <Compile Include="DTO\SucursalDTO.cs" />
+    <Compile Include="DTO\SuministroSynergiaDTO.cs" />
+    <Compile Include="DTO\TablaDTO.cs" />
+    <Compile Include="DTO\TecniDTO.cs" />
+    <Compile Include="DTO\TelefoneDTO.cs" />
+    <Compile Include="DTO\ClienteDTO.cs" />
+    <Compile Include="DTO\ClienteModMedidorDTO.cs" />
+    <Compile Include="DTO\ClienteParamDTO.cs" />
+    <Compile Include="DTO\ExecucaoDTO.cs" />
+    <Compile Include="DTO\PangeaGenericaDTO.cs" />
+    <Compile Include="DTO\ParCorteDTO.cs" />
+    <Compile Include="DTO\ParCorteListDTO.cs" />
+    <Compile Include="DTO\ParReconexionDTO.cs" />
+    <Compile Include="DTO\ParReconexionListDTO.cs" />
+    <Compile Include="DTO\ParRetornoOrdemDTO.cs" />
+    <Compile Include="DTO\ParSolicitudBloqCorteListDTO.cs" />
+    <Compile Include="DTO\ResultadoCorteDTO.cs" />
+    <Compile Include="DTO\ResultadoReconexionDTO.cs" />
+    <Compile Include="DTO\RetornoOrdemDTO.cs" />
+    <Compile Include="DTO\SolicitBloqCorteClienteVitalDTO.cs" />
+    <Compile Include="DTO\UnidadeLecturaSecDTO.cs" />
+    <Compile Include="DTO\V2ComunicaDTO.cs" />
+    <Compile Include="DTO\VisitaOrdemDTO.cs" />
+    <Compile Include="Enum\Empresa.cs" />
+    <Compile Include="Enum\InterfacesContrato.cs" />
+    <Compile Include="Enum\Motivo.cs" />
+    <Compile Include="Enum\OrdemServicoEstado.cs" />
+    <Compile Include="Enum\GrupoRegistrador.cs" />
+    <Compile Include="Enum\Submotivo.cs" />
+    <Compile Include="Enum\MotivoCancelamentoOrdem.cs" />
+    <Compile Include="Enum\TipoDocumento.cs" />
+    <Compile Include="Enum\TipoCliente.cs" />
+    <Compile Include="ErroArquivo.cs" />
+    <Compile Include="Etapa.cs" />
+    <Compile Include="OrdemServico.cs" />
+    <Compile Include="Parametros\Entrada\OrdemServicoCancelaIn.cs" />
+    <Compile Include="Parametros\Entrada\OrdemServicoGenericaIn.cs" />
+    <Compile Include="Parametros\Entrada\ReligacaoIn.cs" />
+    <Compile Include="Parametros\Saida\OrdemServicoGenericaOut.cs" />
+    <Compile Include="Parametros\Saida\SuministroSynergiaOut.cs" />
+    <Compile Include="ResultadoCorte.cs" />
+    <Compile Include="RetornoServico.cs" />
+    <Compile Include="SalesGeral.cs" />
+    <Compile Include="Servico.cs" />
+    <Compile Include="ClienteAReligar.cs" />
+    <Compile Include="ClienteGrupoA.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteSolucoes.cs" />
+    <Compile Include="CobrancaValorInformado.cs" />
+    <Compile Include="CobrancaValorInformadoCliente.cs" />
+    <Compile Include="Corte.cs" />
+    <Compile Include="CorteGrupoA.cs" />
+    <Compile Include="DTO\SuministroDTO.cs" />
+    <Compile Include="DTO\CnrDTO.cs" />
+    <Compile Include="DTO\CorcliDTO.cs" />
+    <Compile Include="DTO\CorparDTO.cs" />
+    <Compile Include="DTO\DadosCorsocoDTO.cs" />
+    <Compile Include="DTO\DocumentoDesconexionDTO.cs" />
+    <Compile Include="DTO\EnvioDocumentoDesconexionDTO.cs" />
+    <Compile Include="DTO\RetornoDocumentoDesconexionDTO.cs" />
+    <Compile Include="DTO\TipoCorteDTO.cs" />
+    <Compile Include="Medidor.cs" />
+    <Compile Include="DTO\CorrepDTO.cs" />
+    <Compile Include="DTO\CorsocoDTO.cs" />
+    <Compile Include="DTO\ReligacaoPendenteDTO.cs" />
+    <Compile Include="DTO\CorsoreDTO.cs" />
+    <Compile Include="EmpresaParceira.cs" />
+    <Compile Include="Enum\CodigoRetorno.cs" />
+    <Compile Include="Enum\Mensagens.cs" />
+    <Compile Include="MensagemRetorno.cs" />
+    <Compile Include="ParametroServico.cs" />
+    <Compile Include="ParametroCorte.cs" />
+    <Compile Include="Parametros\Saida\Resultado.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="ResultadoCorteEntity.cs" />
+    <Compile Include="SOAP\Movimentos.cs" />
+    <Compile Include="SOAP\MovimentosArquivos.cs" />
+    <Compile Include="SOAP\MovimentosCadastro.cs" />
+    <Compile Include="SOAP\MovimentosFatura.cs" />
+    <Compile Include="SOAP\MovimentosHistoricoAdesao.cs" />
+    <Compile Include="MovimentosProdutoCliente.cs" />
+    <Compile Include="SOAP\MovimentosParcelasVInf.cs" />
+    <Compile Include="SOAP\MovimentosSolicitacoes.cs" />
+    <Compile Include="MovimentosSolucoes.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="ProdutoCliente.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetornoSolicitacaoTipoC.cs" />
+    <Compile Include="RetornoSolicitacaoTipoCFatura.cs" />
+    <Compile Include="SolicitacaoTipoD.cs" />
+    <Compile Include="Sucursal.cs" />
+    <Compile Include="Tabla.cs" />
+    <Compile Include="SalesForce\Corte.cs" />
+    <Compile Include="SalesForce\NotificarCasoReturn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pangea.Util\Pangea.Util.csproj">
+      <Project>{b42b500a-7951-43da-88ec-df38157a0f9b}</Project>
+      <Name>Pangea.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

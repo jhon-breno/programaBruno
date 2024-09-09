@@ -1,0 +1,93 @@
+C:\Users\Bruno Werneck\Desktop\SalesForce-Schema-Builder-master\bin\Debug\basicSample_cs_p.exe.config
+C:\Users\Bruno Werneck\Desktop\SalesForce-Schema-Builder-master\bin\Debug\basicSample_cs_p.exe
+C:\Users\Bruno Werneck\Desktop\SalesForce-Schema-Builder-master\bin\Debug\basicSample_cs_p.pdb
+C:\Users\Bruno Werneck\Desktop\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Desktop\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.exe
+C:\Users\Bruno Werneck\Desktop\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\bin\Debug\DeltaReverso.exe.config
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\bin\Debug\DeltaReverso.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\bin\Debug\DeltaReverso.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\bin\Debug\IBM.Data.Informix.dll
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\obj\Debug\DeltaReverso.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\SalesForce-Schema-Builder-master\obj\Debug\DeltaReverso.pdb
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\bin\Debug\DeltaReverso.exe.config
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\obj\Debug\DeltaReverso.exe
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\obj\Debug\DeltaReverso.pdb
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\bin\Debug\DeltaReverso.exe
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\bin\Debug\DeltaReverso.pdb
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\bin\Debug\IBM.Data.Informix.dll
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe.config
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\bin\Debug\IBM.Data.Informix.dll
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\Update canal de preferência Celular\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForce\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe.config
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForce\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForce\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe.config
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForceDemanda\SalesForce-Schema-Builder-master\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe.config
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizaCelularSF.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csprojResolveAssemblyReference.cache
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.AssemblyReference.cache
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizaFaturaSalesForce.exe.config
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizaFaturaSalesForce.exe
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizaFaturaSalesForce.pdb
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\Pangea.pdb
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\Pangea.exe.config
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizaFaturaSalesForce.exe
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizaFaturaSalesForce.pdb
+C:\Users\blawe\Desktop\TEMAS SALES FORCE URGENTES\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\IBM.Data.Informix.dll
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.AssemblyReference.cache
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe.config
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.pdb
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.exe
+C:\Users\blawe\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.pdb
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe.config
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.pdb
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.AssemblyReference.cache
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.SuggestedBindingRedirects.cache
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.exe
+C:\Users\HomeWork\Desktop\Update SalesForcePOD-Name\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.pdb
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe.config
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.pdb
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.AssemblyReference.cache
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.SuggestedBindingRedirects.cache
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.exe
+D:\Projetos\Salesforce\trunk\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.pdb
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe.config
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.exe
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\bin\Debug\AtualizarBills.pdb
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.AssemblyReference.cache
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\basicSample_cs_p.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.exe
+C:\Users\blawe\Documents\GitHub\Pessoal\Programas\Enel.MigrateSalesforce\SalesForce-Schema-Builder-master\obj\Debug\AtualizarBills.pdb

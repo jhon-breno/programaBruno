@@ -1,0 +1,39 @@
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe.config
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\Debug\Pangea.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Debug\Pangea.pdb
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\Debug\IBM.Data.Informix.dll
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\Debug\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe.config
+C:\Users\Bruno Werneck\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe.config
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\IBM.Data.Informix.dll
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V1\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.csprojResolveAssemblyReference.cache
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe.config
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.pdb
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\IBM.Data.Informix.dll
+C:\Users\Bruno Werneck\Desktop\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.csprojResolveAssemblyReference.cache
+C:\Users\BrunoLisa\Desktop\TEMAS SALES FORCE URGENTES\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe.config
+C:\Users\BrunoLisa\Desktop\TEMAS SALES FORCE URGENTES\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe
+C:\Users\BrunoLisa\Desktop\TEMAS SALES FORCE URGENTES\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.pdb
+C:\Users\BrunoLisa\Desktop\TEMAS SALES FORCE URGENTES\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.csprojResolveAssemblyReference.cache
+C:\Users\BrunoLisa\Desktop\TEMAS SALES FORCE URGENTES\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.exe
+C:\Users\BrunoLisa\Desktop\TEMAS SALES FORCE URGENTES\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.pdb
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe.config
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.exe
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\Pangea.pdb
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\bin\Debug\IBM.Data.Informix.dll
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.csproj.CoreCompileInputs.cache
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.csproj.CopyComplete
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.exe
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.pdb
+C:\Users\br0118831537\Desktop\Programas\Delta Reverso V2\Pangea.Servicos\Pangea.Servicos\Pangea\obj\Debug\Pangea.csprojAssemblyReference.cache

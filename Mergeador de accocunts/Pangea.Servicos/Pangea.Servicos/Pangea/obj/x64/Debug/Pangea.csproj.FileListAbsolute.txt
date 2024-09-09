@@ -1,0 +1,16 @@
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\x64\Debug\Pangea.exe.config
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\x64\Debug\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\x64\Debug\Pangea.pdb
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\bin\x64\Debug\IBM.Data.Informix.dll
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\x64\Debug\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\x64\Debug\Pangea.pdb
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea\obj\x64\Debug\Pangea.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\x64\Debug\Pangea.exe.config
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\obj\x64\Debug\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\obj\x64\Debug\Pangea.pdb
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\obj\x64\Debug\Pangea.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\x64\Debug\Pangea.exe
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\x64\Debug\Pangea.pdb
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\x64\Debug\IBM.Data.Informix.dll
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\USUARIO\Desktop\Pangea.Servicos\Pangea.Servicos\Pangea\bin\x64\Debug\Newtonsoft.Json.xml

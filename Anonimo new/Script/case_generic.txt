@@ -1,0 +1,12 @@
+Case currentCase = [SELECT Id, Reason, Subject, Status, SubStatus__c, AssocObjectExtId__c, Contact.Email, Contact.SecondaryEmail__c, 
+                            Contact.IdentityNumber__c, NumberOfOrder__c, TraceErrorInservice__c, Type, Type_of_claim__c, Channel_Type__c, 
+                            OwnerId, PointofDelivery__c, CaseNumber, Origin 
+                            FROM Case WHERE casenumber = '{0}'];
+try
+{         
+    ATCL_WS06_PostActuacionGenerica.invokePostActuacionGenerica(currentCase);         
+}
+catch(Exception e)
+{
+    System.debug('Aconteceu algo de errado:  '+e.getMessage());
+}

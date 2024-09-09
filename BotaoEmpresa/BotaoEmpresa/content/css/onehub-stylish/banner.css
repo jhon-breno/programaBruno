@@ -1,0 +1,49 @@
+﻿.banner {
+    padding: 230px 0 170px;
+    height: 520px;
+}
+
+banner-bc ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    background-color: transparent;
+}
+
+banner-bc li {
+    display: inline;
+    background-color: transparent;
+    letter-spacing: .52px;
+    font-size: 13px;
+    font-family: Enel Roobert Regular,Calibri,Myriad,Tahoma,Geneva,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    opacity: .5;
+    text-transform: uppercase;
+}
+
+banner-bc li a {
+    background-color: transparent;
+    color: #fff;
+}
+
+banner-bc li a:hover {
+    background-color: transparent;
+    color: #000;
+    text-decoration: underline;
+}
+
+banner-bc li + li:before {
+    content: "/";
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .banner .title { font-size: 2.5rem; }
+    .banner {
+        height: auto;
+        padding-top: 125px;
+        padding-bottom: 45px;
+    }
+}
