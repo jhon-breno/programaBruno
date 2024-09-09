@@ -1,0 +1,14 @@
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\bin\Debug\DisparadorPrograma.exe.config
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.exe
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.pdb
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\bin\Debug\DisparadorPrograma.exe
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\bin\Debug\DisparadorPrograma.pdb
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.csprojAssemblyReference.cache
+C:\Users\br0118831537\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\bin\Debug\DisparadorPrograma.exe.config
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\bin\Debug\DisparadorPrograma.exe
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\bin\Debug\DisparadorPrograma.pdb
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.csproj.AssemblyReference.cache
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.csproj.CoreCompileInputs.cache
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.exe
+C:\Users\blawe\Desktop\Programas\DisparadorPrograma\DisparadorPrograma\obj\Debug\DisparadorPrograma.pdb
